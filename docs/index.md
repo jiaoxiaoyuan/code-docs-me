@@ -6,6 +6,15 @@ sidebar: false
 title: Mr焦的博客
 titleTemplate: 欢迎来到我的博客
 
+
+head:
+  - - meta
+    - name: description
+      content: hello
+  - - meta
+    - name: keywords
+      content: super duper SEO
+
 hero:
   name: "Mr焦"
 #   text: "爱音乐、爱折腾、爱生活"
