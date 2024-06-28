@@ -19,6 +19,20 @@
     }
 }
 
+/* 大屏大一点 */
+@media (min-width: 1440px) {
+    .VPSidebar {
+        padding-left: 10px !important;
+        width: unset !important
+    }
+}
+
+@media (min-width: 1440px) {
+    .VPNavBar.has-sidebar .title {
+        padding-left: 10px !important;
+            width: unset !important
+    }
+}
 
 
 /* nav 换行问题（6 个还是有点小多，后面看看怎么优化） */
