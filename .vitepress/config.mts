@@ -1,7 +1,11 @@
 import { defineConfig } from 'vitepress'
 import nav from './nav'
 import sidebar from './sidebar'
-import footer from './footer'
+// import footer from './footer'
+
+import { docsAuto } from '@yicode/yidocs-auto'
+
+const { sideBar, navBar } = docsAuto()
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
