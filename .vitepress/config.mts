@@ -40,9 +40,16 @@ export default defineConfig({
             prev: '上一页',
             next: '下一页'
         },
-        returnToTopLabel: '返回顶部'
+        returnToTopLabel: '返回顶部',
+        lastUpdated: {
+            text: '最后更新于',
+            formatOptions: {
+                dateStyle: 'short',
+                timeStyle: 'medium'
+            }
+        }
     },
-    lastUpdated: true,
+
     markdown: {
         // 代码块风格
         theme: 'material-theme-palenight',

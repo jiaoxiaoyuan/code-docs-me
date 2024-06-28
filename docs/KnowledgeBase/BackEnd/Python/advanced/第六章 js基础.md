@@ -355,7 +355,7 @@ function myFunc2(){
 
 ## 1.for循环
 
-```javas
+```javascript
 for(定义一个临时变量; 循环条件; 临时变量自增){
     循环体
 }

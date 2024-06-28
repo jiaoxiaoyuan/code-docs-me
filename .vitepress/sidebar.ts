@@ -1,8 +1,9 @@
-import HTMLMD from './utils/HTML'
+// import HTMLMD from './utils/HTML'
 
+import { HTMLMD } from './utils'
 export default {
+    // 前端知识库
     '/KnowledgeBase/FrontEnd/HTML': HTMLMD,
-
     '/KnowledgeBase/FrontEnd/CSS': [
         {
             text: '基础',
@@ -58,7 +59,8 @@ export default {
             ]
         }
     ],
-    '/KnowledgeBase/FrontEnd/Node': [
+    // 移动端知识库
+    '/KnowledgeBase/FrontEnd/Flutter': [
         {
             text: '基础',
             collapsed: true,
@@ -66,6 +68,49 @@ export default {
                 { text: 'index1', link: '/KnowledgeBase/FrontEnd/Node/index1' },
                 { text: 'index2', link: '/KnowledgeBase/FrontEnd/Node/index2' },
                 { text: 'index3', link: '/KnowledgeBase/FrontEnd/Node/index3' }
+            ]
+        }
+    ],
+    // 后端知识库，
+    '/KnowledgeBase/BackEnd/Node': [
+        {
+            text: '基础',
+            collapsed: true,
+            items: [
+                { text: 'index1', link: '/KnowledgeBase/BackEnd/Node/index1' },
+                { text: 'index2', link: '/KnowledgeBase/BackEnd/Node/index2' },
+                { text: 'index3', link: '/KnowledgeBase/BackEnd/Node/index3' }
+            ]
+        }
+    ],
+    '/KnowledgeBase/BackEnd/Java': [
+        {
+            text: '基础',
+            collapsed: true,
+            items: [
+                { text: 'index1', link: '/KnowledgeBase/BackEnd/Java/index1' },
+                { text: 'index2', link: '/KnowledgeBase/BackEnd/Java/index2' },
+                { text: 'index3', link: '/KnowledgeBase/BackEnd/Java/index3' }
+            ]
+        }
+    ],
+    '/KnowledgeBase/BackEnd/Python': [
+        {
+            text: '基础',
+            collapsed: true,
+            items: [
+                { text: 'index1', link: '/KnowledgeBase/BackEnd/Python/index1' },
+                { text: 'index2', link: '/KnowledgeBase/BackEnd/Python/index2' },
+                { text: 'index3', link: '/KnowledgeBase/BackEnd/Python/index3' }
+            ]
+        },
+        {
+            text: '进阶',
+            collapsed: true,
+            items: [
+                { text: 'index1', link: '/KnowledgeBase/BackEnd/Python/index1' },
+                { text: 'index2', link: '/KnowledgeBase/BackEnd/Python/index2' },
+                { text: 'index3', link: '/KnowledgeBase/BackEnd/Python/index3' }
             ]
         }
     ]
