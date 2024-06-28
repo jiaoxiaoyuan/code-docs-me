@@ -3,7 +3,6 @@ import HTMLMD from './utils/HTML'
 export default {
     '/KnowledgeBase/FrontEnd/HTML': HTMLMD,
 
-    // '/KnowledgeBase/FrontEnd/HTML': set_sidebar('HTML'),
     '/KnowledgeBase/FrontEnd/CSS': [
         {
             text: '基础',
