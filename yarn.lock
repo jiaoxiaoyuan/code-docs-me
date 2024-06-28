@@ -657,15 +657,6 @@
   dependencies:
     vue-demi ">=0.14.8"
 
-"@yicode/yidocs-auto@^1.6.3":
-  version "1.6.3"
-  resolved "https://mirrors.cloud.tencent.com/npm/@yicode/yidocs-auto/-/yidocs-auto-1.6.3.tgz#c63bcc82f7fcc510aea60fb17774cf5ee0c1ee47"
-  integrity sha512-4YrcJbZiHmqws3qdA2ZPEEBkOjI3Psvj6PH1nMgy/Cz6cTiCZXYtNjhXj9hUDq+FYIiQdiX/FSwnyNGh0DH2qw==
-  dependencies:
-    colorette "^2.0.20"
-    fast-glob "^3.3.2"
-    lodash-es "^4.17.21"
-
 algoliasearch@^4.19.1:
   version "4.24.0"
   resolved "https://mirrors.cloud.tencent.com/npm/algoliasearch/-/algoliasearch-4.24.0.tgz#b953b3e2309ef8f25da9de311b95b994ac918275"
@@ -820,11 +811,6 @@ color-name@~1.1.4:
   resolved "https://mirrors.cloud.tencent.com/npm/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-colorette@^2.0.20:
-  version "2.0.20"
-  resolved "https://mirrors.cloud.tencent.com/npm/colorette/-/colorette-2.0.20.tgz#9eb793e6833067f7235902fcd3b09917a000a95a"
-  integrity sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==
-
 commander@^4.0.0:
   version "4.1.1"
   resolved "https://mirrors.cloud.tencent.com/npm/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
@@ -930,7 +916,7 @@ estree-walker@^2.0.2:
   resolved "https://mirrors.cloud.tencent.com/npm/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
 
-fast-glob@^3.3.0, fast-glob@^3.3.2:
+fast-glob@^3.3.0:
   version "3.3.2"
   resolved "https://mirrors.cloud.tencent.com/npm/fast-glob/-/fast-glob-3.3.2.tgz#a904501e57cfdd2ffcded45e99a54fef55e46129"
   integrity sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==
@@ -1109,11 +1095,6 @@ linkify-it@^5.0.0:
   integrity sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==
   dependencies:
     uc.micro "^2.0.0"
-
-lodash-es@^4.17.21:
-  version "4.17.21"
-  resolved "https://mirrors.cloud.tencent.com/npm/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lru-cache@^10.2.0:
   version "10.3.0"
