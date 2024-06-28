@@ -1,13 +1,19 @@
 ---
+layout: doc
 layoutClass: m-nav-layout
+sidebar: false
+prev: false
+next: false
 outline: [2, 3, 4]
 
 ---
 
+
+
+
+
 <script setup>
 import { NAV_DATA } from './data'
-
-console.log(NAV_DATA)
 </script>
 <style src="./index.scss"></style>
 
