@@ -32,7 +32,7 @@ function getList(params, path1, pathname) {
             })
         } else {
             // 获取名字
-            const name: string = path.basename(params[file])
+            const name = path.basename(params[file])
             // 排除非 md 文件
             const suffix = path.extname(params[file])
             if (suffix !== '.md') {
@@ -47,7 +47,6 @@ function getList(params, path1, pathname) {
     return res
 }
 
-// 获取文件列表
 export const set_sidebar = pathname => {
     // 获取pathname的路径
     const dirPath = path.join(DIR_PATH, pathname)
