@@ -27,9 +27,6 @@ export default {
         // DefaultTheme.enhanceApp({ app, router, siteData });
         app.use(ElementPlus);
 
-        // app.component("MNavLinks", MNavLinks);
-        // app.component("HomeIndex", HomeIndex);
-
         useComponents(app);
     },
 
