@@ -5,5 +5,5 @@ dist/
 .DS_Store
 .idea/
 .vscode/
-.vitepress/cache
 
+yarn.lock
