@@ -1,9 +1,10 @@
 <script setup lang="ts">
+
 import { computed } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
 
-// import Copyright from './components/layout/Copyright.vue';
+import Header from './components/Header.vue';
 import Footer from './components/layout/Footer.vue';
 
 
@@ -19,6 +20,7 @@ const hasSidebar = computed(() => {
 </script>
 
 <template>
+      <!-- <Header /> -->
      <ClientOnly>
        <Layout>
             <template #layout-bottom>

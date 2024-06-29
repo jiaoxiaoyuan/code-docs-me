@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress';
-const { theme } = useData();
+// const { theme } = useData();
+
+
 </script>
 
 
@@ -90,4 +92,4 @@ p {
   position: relative;
   top: 2px;
 }
-</style> 
+</style>

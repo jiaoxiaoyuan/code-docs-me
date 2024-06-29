@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { slugify } from '@mdit-vue/shared'
 
 import MNavLink from './MNavLink.vue'
-import type { NavLink } from '../types.ts'
+import type { NavLink } from '../../types.ts'
 
 const props = defineProps<{
     title: string

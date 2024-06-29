@@ -1,11 +1,10 @@
-import { defineConfig } from 'vitepress'
-import { head } from './config/head'
-import { metaData } from './config/constants'
-
-import { themeConfig } from './config/theme'
+import { defineConfig } from "vitepress";
+import { head } from "./config/head";
+import { metaData } from "./config/constants";
+import { themeConfig } from "./config/theme";
 
 export default defineConfig({
-    srcDir: 'docs',
+    srcDir: "docs",
     lang: metaData.lang,
     title: metaData.title,
     description: metaData.description,
@@ -14,5 +13,5 @@ export default defineConfig({
     cleanUrls: true,
     lastUpdated: true, // 显示最后更新时间
 
-    themeConfig // 主题配置
-})
+    themeConfig, // 主题配置
+});
