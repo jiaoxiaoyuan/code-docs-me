@@ -1,3 +1,12 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-background-color);
+    overflow: hidden;
+    font-family: HarmonyOS_Regular, sans-serif;
+}
+
 /***** vitepress 样式优化 ******/
 
 /* 大屏大一点 */

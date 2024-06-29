@@ -30,4 +30,14 @@ export const themeConfig: DefaultTheme.Config = {
     },
     // 显示目录
     outlineTitle: "目录",
+    //自定义上下页名
+    docFooter: {
+        prev: "上一页",
+        next: "下一页",
+    },
+    editLink: {
+        pattern:
+            "https://github.com/jiaoxiaoyuan/code-docs-me/edit/master/docs/:path",
+        text: "在 GitHub 上编辑此页",
+    },
 };

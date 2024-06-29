@@ -24,17 +24,30 @@ export const head: HeadConfig[] = [
     ["meta", { property: "og:site_name", content: metaData.title }],
     ["meta", { property: "og:image", content: metaData.image }],
 
+    // [
+    //     "script",
+    //     {
+    //         src: "https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js",
+    //     },
+    // ],
+    // [
+    //     "script",
+    //     {
+    //         src: "https://myhkw.cn/player/js/player.js",
+    //     },
+    // ],
+
     // 百度统计代码：https://tongji.baidu.com
     [
         "script",
         {},
         `var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?53af4b1a12fbe40810ca7ad39f8db9c7";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();`,
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?53af4b1a12fbe40810ca7ad39f8db9c7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();`,
     ],
     // 页面访问量统计
     // ['script', {}, `

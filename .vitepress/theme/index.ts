@@ -1,29 +1,73 @@
-// https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import { h, onMounted, watch, nextTick } from "vue";
 
-import MyLayout from './MyLayout.vue'
+import type { Theme } from "vitepress";
+import { useRoute, useData } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import type { EnhanceAppContext } from "vitepress";
+import "./styles/index.scss";
 
-import MNavLinks from "./components/MNavLinks.vue";
+import MyLayout from "./MyLayout.vue";
+import { useComponents } from "./useComponents";
 
+import mediumZoom from "medium-zoom";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
 
-import './styles/index.scss'
+import giscusTalk from "vitepress-plugin-comment-with-giscus";
+
+// 只需添加以下一行代码，引入时间线样式
+import "vitepress-markdown-timeline/dist/theme/index.css";
 
 export default {
     extends: DefaultTheme,
-
-    NotFound: () => 'custom 404',
-
+    NotFound: () => "custom 404",
     Layout: MyLayout,
 
-    enhanceApp({ app, router, siteData }) {
-        // ...
-        app.component("MNavLinks", MNavLinks);
+    enhanceApp({ app, router, siteData }: EnhanceAppContext) {
+        // DefaultTheme.enhanceApp({ app, router, siteData });
+        app.use(ElementPlus);
+
+        // app.component("MNavLinks", MNavLinks);
+        // app.component("HomeIndex", HomeIndex);
+
+        useComponents(app);
     },
 
     setup() {
-        // this function will be executed inside VitePressApp's
-        // setup hook. all composition APIs are available here.
-    }
-} satisfies Theme
+        const route = useRoute();
+        const initZoom = () => {
+            // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
+            mediumZoom(".main img", { background: "var(--vp-c-bg)" }); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
+        };
+        onMounted(() => {
+            initZoom();
+        });
+        watch(
+            () => route.path,
+            () => nextTick(() => initZoom())
+        );
+
+        // giscus配置
+
+        const { frontmatter } = useData();
+        giscusTalk(
+            {
+                repo: "jiaoxiaoyuan/code-docs-me", //仓库
+                repoId: "R_kgDOMPu5tw", //仓库ID
+                category: "Announcements", // 讨论分类
+                categoryId: "DIC_kwDOMPu5t84CgeGX", //讨论分类ID
+                mapping: "pathname",
+                inputPosition: "bottom",
+                lang: "zh-CN",
+            },
+            {
+                frontmatter,
+                route,
+            },
+            //默认值为true，表示已启用，此参数可以忽略；
+            //如果为false，则表示未启用
+            //您可以使用“comment:true”序言在页面上单独启用它
+            true
+        );
+    },
+} satisfies Theme;

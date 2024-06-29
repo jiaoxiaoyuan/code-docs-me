@@ -1,10 +1,10 @@
 export interface NavLink {
     /** 站点图标 */
-    icon?: string | { svg: string }
+    icon?: string | { svg: string };
     /** 站点名称 */
-    title: string
+    title: string;
     /** 站点名称 */
-    desc?: string
+    desc?: string;
     /** 站点链接 */
-    link: string
+    link: string;
 }
