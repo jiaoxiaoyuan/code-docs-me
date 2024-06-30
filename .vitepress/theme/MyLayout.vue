@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import APlayer from "@worstone/vue-aplayer";
+import APlayer from "../utils/vue-aplayer/vue-aplayer";
 import { nextTick, onBeforeUnmount, ref, onMounted, onUnmounted, computed } from "vue";
 import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
@@ -64,7 +64,7 @@ const hasSidebar = computed(() => {
             </template>
         </Layout>
 
-    <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  />
+    <!-- <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  /> -->
 
 </template>
 
