@@ -1,29 +1,10 @@
 import type { DefaultTheme } from "vitepress";
-import { HTMLMD, CSSMD } from "../menu";
+import { HTMLMD, CSSMD, JavaScriptMD } from "../menu";
 export const sidebar: DefaultTheme.Config["sidebar"] = {
     // 前端知识库
     "/KnowledgeBase/FrontEnd/HTML": HTMLMD,
     "/KnowledgeBase/FrontEnd/CSS": CSSMD,
-    "/KnowledgeBase/FrontEnd/JavaScript": [
-        {
-            text: "基础",
-            collapsed: true,
-            items: [
-                {
-                    text: "index1",
-                    link: "/KnowledgeBase/FrontEnd/JavaScript/index1",
-                },
-                {
-                    text: "index2",
-                    link: "/KnowledgeBase/FrontEnd/JavaScript/index2",
-                },
-                {
-                    text: "index3",
-                    link: "/KnowledgeBase/FrontEnd/JavaScript/index3",
-                },
-            ],
-        },
-    ],
+    "/KnowledgeBase/FrontEnd/JavaScript": JavaScriptMD,
     "/KnowledgeBase/FrontEnd/TypeScript": [
         {
             text: "基础",

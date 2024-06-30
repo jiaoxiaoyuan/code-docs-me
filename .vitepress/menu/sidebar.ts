@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// import { useData } from "vitepress";
+
 interface SidebarMulti {
     [path: string]: SidebarItem[] | { items: SidebarItem[]; base: string };
 }
@@ -19,6 +21,10 @@ interface SidebarConfig {
 
 // 递归获取目录下的所有 .md 文件
 function getMarkdownFiles(dir: string, baseDir: string = dir): string[] {
+    // const { frontmatter } = useData();
+
+    // console.log(frontmatter);
+
     let files: string[] = [];
     const items = fs.readdirSync(dir, { withFileTypes: true });
 

@@ -14,6 +14,7 @@ const viteConfig = defineConfig(({ mode, command }) => {
             alias: {
                 /** @ 符号指向 src 目录 */
                 "@": resolve(__dirname, "./.vitepress"),
+                "@/page": resolve(__dirname, "./page"),
             },
             extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
         },
@@ -22,7 +23,9 @@ const viteConfig = defineConfig(({ mode, command }) => {
         // 设置打包路径
         server: {
             hmr: true, // 开启热更新
-            // 其他服务器选项...
+            host: "0.0.0.0",
+            port: 3300,
+            open: true,
         },
     };
 });

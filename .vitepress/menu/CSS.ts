@@ -18,17 +18,17 @@ export default [
                     "/KnowledgeBase/FrontEnd/CSS/concept/concept"
                 ),
             },
-            // {
-            //     text: "属性",
-            //     collapsed: true,
-            //     items: generateSidebarConfig(
-            //         path.resolve(
-            //             __dirname,
-            //             "../../docs/KnowledgeBase/FrontEnd/CSS/properties"
-            //         ),
-            //         "/KnowledgeBase/FrontEnd/HTML/properties"
-            //     ),
-            // },
+            {
+                text: "属性",
+                collapsed: true,
+                items: generateSidebarConfig(
+                    path.resolve(
+                        __dirname,
+                        "../../docs/KnowledgeBase/FrontEnd/CSS/concept/attribute"
+                    ),
+                    "/KnowledgeBase/FrontEnd/CSS/concept/attribute"
+                ),
+            },
             {
                 text: "规则",
                 collapsed: true,
@@ -156,51 +156,12 @@ export default [
     {
         text: "应用",
         collapsed: true,
-        items: [
-            {
-                text: "概念",
-                collapsed: true,
-                items: generateSidebarConfig(
-                    path.resolve(
-                        __dirname,
-                        "../../docs/KnowledgeBase/FrontEnd/HTML/Concept"
-                    ),
-                    "/KnowledgeBase/FrontEnd/HTML/Concept"
-                ),
-            },
-            {
-                text: "属性",
-                collapsed: true,
-                items: generateSidebarConfig(
-                    path.resolve(
-                        __dirname,
-                        "../../docs/KnowledgeBase/FrontEnd/HTML/Attribute"
-                    ),
-                    "/KnowledgeBase/FrontEnd/HTML/Attribute"
-                ),
-            },
-            {
-                text: "规则",
-                collapsed: true,
-                items: generateSidebarConfig(
-                    path.resolve(
-                        __dirname,
-                        "../../docs/KnowledgeBase/FrontEnd/HTML/Rule"
-                    ),
-                    "/KnowledgeBase/FrontEnd/HTML/Rule"
-                ),
-            },
-            {
-                text: "资源",
-                collapsed: true,
-                items: generateSidebarConfig(
-                    path.resolve(
-                        __dirname,
-                        "../../docs/KnowledgeBase/FrontEnd/HTML/Resources"
-                    ),
-                    "/KnowledgeBase/FrontEnd/HTML/Resources"
-                ),
-            },
-        ],
+        items: generateSidebarConfig(
+            path.resolve(
+                __dirname,
+                "../../docs/KnowledgeBase/FrontEnd/CSS/application"
+            ),
+            "/KnowledgeBase/FrontEnd/CSS/application"
+        ),
     },
 ];
