@@ -5,8 +5,6 @@ import { useData } from 'vitepress';
 
 </script>
 
-
-
 <template>
   <footer class="VPFooter">
     <div class="container">
@@ -34,7 +32,7 @@ import { useData } from 'vitepress';
 
 
 
-<style scoped>
+<style scoped lang="scss">
 .VPFooter {
   position: relative;
   z-index: var(--vp-z-index-footer);

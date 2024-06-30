@@ -1,5 +1,6 @@
 ---
 layout: doc
+layoutClass: m-nav-layout
 # nav: false
 sidebar: false
 outline: false

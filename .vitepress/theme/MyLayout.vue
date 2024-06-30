@@ -11,6 +11,10 @@ import Footer from './components/layout/Footer.vue';
 const { Layout } = DefaultTheme;
 const { page, theme, frontmatter } = useData();
 
+// console.log('page',page)
+// console.log('theme',theme)
+// console.log('frontmatter',frontmatter)
+
 const hasSidebar = computed(() => {
     return (
         frontmatter.value.aside !== false && frontmatter.value.layout !== 'home'
@@ -24,7 +28,8 @@ const hasSidebar = computed(() => {
      <ClientOnly>
        <Layout>
             <template #layout-bottom>
-                <Footer v-if="!hasSidebar && (theme.footerConfig?.showFooter ?? true) && (frontmatter?.showFooter ?? true)" />
+                <!-- <Footer v-if="!hasSidebar && (theme.footerConfig?.showFooter ?? true) && (frontmatter?.showFooter ?? true)" /> -->
+                <Footer />
             </template>
         </Layout>
      </ClientOnly>

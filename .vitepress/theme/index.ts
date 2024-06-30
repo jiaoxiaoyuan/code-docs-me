@@ -21,6 +21,7 @@ import "vitepress-markdown-timeline/dist/theme/index.css";
 export default {
     extends: DefaultTheme,
     NotFound: () => "custom 404",
+    // Layout: () => h(MyLayout),
     Layout: MyLayout,
 
     enhanceApp({ app, router, siteData }: EnhanceAppContext) {
@@ -47,6 +48,9 @@ export default {
         // giscus配置
 
         const { frontmatter } = useData();
+
+        console.log("frontmatter.value.layout", frontmatter.value.layoutClass);
+
         giscusTalk(
             {
                 repo: "jiaoxiaoyuan/code-docs-me", //仓库
@@ -64,7 +68,7 @@ export default {
             //默认值为true，表示已启用，此参数可以忽略；
             //如果为false，则表示未启用
             //您可以使用“comment:true”序言在页面上单独启用它
-            true
+            frontmatter.value.layoutClass === "m-nav-layout" ? false : true
         );
     },
 } satisfies Theme;
