@@ -4,7 +4,7 @@ import { computed } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
 
-import Header from './components/Header.vue';
+// import Header from './components/Header.vue';
 import Footer from './components/layout/Footer.vue';
 
 
