@@ -25,15 +25,12 @@ const hasSidebar = computed(() => {
 
 <template>
       <!-- <Header /> -->
-     <ClientOnly>
        <Layout>
             <template #layout-bottom>
                 <!-- <Footer v-if="!hasSidebar && (theme.footerConfig?.showFooter ?? true) && (frontmatter?.showFooter ?? true)" /> -->
                 <Footer />
             </template>
         </Layout>
-     </ClientOnly>
-
 </template>
 
 

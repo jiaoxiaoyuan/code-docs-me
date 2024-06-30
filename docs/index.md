@@ -40,10 +40,6 @@ titleTemplate: 欢迎来到我的博客
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-<!-- <HomeIndex/> -->
+<HomeIndex/>
 
-<script setup lang="ts"> 
-import IndexPage from '../page/Home/index.vue'; 
-</script>
 
-<IndexPage/>
