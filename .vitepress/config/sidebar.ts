@@ -57,14 +57,47 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         },
     ],
     // 移动端知识库
-    "/KnowledgeBase/FrontEnd/Flutter": [
+    "/KnowledgeBase/Move/Android": [
         {
             text: "基础",
             collapsed: true,
             items: [
-                { text: "index1", link: "/KnowledgeBase/FrontEnd/Node/index1" },
-                { text: "index2", link: "/KnowledgeBase/FrontEnd/Node/index2" },
-                { text: "index3", link: "/KnowledgeBase/FrontEnd/Node/index3" },
+                { text: "index1", link: "/KnowledgeBase/Node/index1" },
+                { text: "index2", link: "/KnowledgeBase/Node/index2" },
+                { text: "index3", link: "/KnowledgeBase/Node/index3" },
+            ],
+        },
+    ],
+    "/KnowledgeBase/Move/iOS": [
+        {
+            text: "基础",
+            collapsed: true,
+            items: [
+                { text: "index1", link: "/KnowledgeBase/Node/index1" },
+                { text: "index2", link: "/KnowledgeBase/Node/index2" },
+                { text: "index3", link: "/KnowledgeBase/Node/index3" },
+            ],
+        },
+    ],
+    "/KnowledgeBase/Move/Flutter": [
+        {
+            text: "基础",
+            collapsed: true,
+            items: [
+                { text: "index1", link: "/KnowledgeBase/Node/index1" },
+                { text: "index2", link: "/KnowledgeBase/Node/index2" },
+                { text: "index3", link: "/KnowledgeBase/Node/index3" },
+            ],
+        },
+    ],
+    "/KnowledgeBase/Move/ReactNative": [
+        {
+            text: "基础",
+            collapsed: true,
+            items: [
+                { text: "index1", link: "/KnowledgeBase/Node/index1" },
+                { text: "index2", link: "/KnowledgeBase/Node/index2" },
+                { text: "index3", link: "/KnowledgeBase/Node/index3" },
             ],
         },
     ],

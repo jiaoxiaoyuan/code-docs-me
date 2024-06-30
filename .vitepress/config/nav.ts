@@ -21,12 +21,19 @@ export const nav: DefaultTheme.Config["nav"] = [
                     { text: "React", link: "/KnowledgeBase/FrontEnd/React" },
                 ],
             },
+            // 移动端
             {
                 text: "移动端",
                 items: [
-                    { text: "Android", link: "/KnowledgeBase/Move/Android" },
+                    {
+                        text: "Android",
+                        link: "/KnowledgeBase/Move/Android",
+                    },
                     { text: "iOS", link: "/KnowledgeBase/Move/iOS" },
-                    { text: "Flutter", link: "/KnowledgeBase/Move/Flutter" },
+                    {
+                        text: "Flutter",
+                        link: "/KnowledgeBase/Move/Flutter",
+                    },
                     {
                         text: "ReactNative",
                         link: "/KnowledgeBase/Move/ReactNative",
