@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import { slugify } from '@mdit-vue/shared'
 
-import { NavLink } from "../../types.ts"
+import { NavLink } from "../../types"
 
 const props = defineProps<{
     icon?: NavLink['icon']
@@ -98,6 +98,7 @@ const svg = computed(() => {
         :deep(img) {
             border-radius: 4px;
             width: var(--m-nav-icon-size);
+            z-index: 1 !important;
         }
     }
 

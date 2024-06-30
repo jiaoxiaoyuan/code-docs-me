@@ -1,5 +1,9 @@
 import type { DefaultTheme } from "vitepress";
 import { HTMLMD, CSSMD, JavaScriptMD } from "../menu";
+
+import path from "node:path";
+import generateSidebarConfig from "../menu/sidebar";
+
 export const sidebar: DefaultTheme.Config["sidebar"] = {
     // 前端知识库
     "/KnowledgeBase/FrontEnd/HTML": HTMLMD,
@@ -163,20 +167,11 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         },
     ],
     // 技术杂文
-    "/Essay": [
-        {
-            text: "index",
-            link: "/Essay/index.md",
-        },
-        {
-            text: "index1",
-            link: "/Essay/index1.md",
-        },
-        {
-            text: "index2",
-            link: "/Essay/index2.md",
-        },
-    ],
+    "/Essay": generateSidebarConfig(
+        path.resolve(__dirname, "../../docs/Essay"),
+        "Essay"
+    ),
+
     //博客
     "/Blog": [
         {

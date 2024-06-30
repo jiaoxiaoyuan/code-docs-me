@@ -1,5 +1,6 @@
 <script setup lang="ts">
-    import BtnDraw from './components/BtnDraw.vue';
+
+import BtnDraw from './components/BtnDraw.vue';
     import { nextTick, onBeforeUnmount, ref, onMounted, onUnmounted } from "vue";
     const date=ref<string>('')
     const time = ref<string>('')
@@ -23,6 +24,10 @@
         return (zero + num).slice(-digit);
     }
 
+
+
+
+
 </script>
 
 <template>
@@ -43,7 +48,10 @@
         <BtnDraw></BtnDraw>
     </div>
 
+
+
   </div>
+    <!-- <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  /> -->
 </template>
 
 <style scoped lang="scss">

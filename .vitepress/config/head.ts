@@ -2,13 +2,21 @@ import type { HeadConfig } from "vitepress";
 import { metaData } from "./constants";
 
 export const head: HeadConfig[] = [
+    [
+        "meta",
+        {
+            name: "keywords",
+            content:
+                "知识库, 个人博客,个人网站,个人主页,IT博客,技术博客,程序员博客个人博客,个人网站,个人主页,IT博客,技术博客,程序员博客",
+        },
+    ],
     ["link", { rel: "icon", href: metaData.image }],
     ["meta", { name: "author", content: "Jixiaoyuan" }],
     [
         "meta",
         {
-            name: "keywords",
-            content: "知识库, 知识库, 博客, Charles7c",
+            name: "baidu-site-verification",
+            content: "codeva-YylYjOSjF2",
         },
     ],
 
@@ -38,17 +46,17 @@ export const head: HeadConfig[] = [
     // ],
 
     // 百度统计代码：https://tongji.baidu.com
-    // [
-    //     "script",
-    //     {},
-    //     `var _hmt = _hmt || [];
-    //     (function() {
-    //         var hm = document.createElement("script");
-    //         hm.src = "https://hm.baidu.com/hm.js?53af4b1a12fbe40810ca7ad39f8db9c7";
-    //         var s = document.getElementsByTagName("script")[0];
-    //         s.parentNode.insertBefore(hm, s);
-    //     })();`,
-    // ],
+    [
+        "script",
+        {},
+        `var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2dff25399b2114fbc4f60b9edb1c28aa";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();`,
+    ],
     // 页面访问量统计
     // ['script', {}, `
     // window.addEventListener('load', function() {

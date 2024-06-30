@@ -29,4 +29,8 @@ export default defineConfig({
             lazyLoading: true,
         },
     },
+    sitemap: {
+        hostname: "https://www.4rvi.cn",
+        lastmodDateOnly: false,
+    },
 });
