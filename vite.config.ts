@@ -21,12 +21,6 @@ const viteConfig = defineConfig(({ mode, command }) => {
         // plugins: [vue()],
         plugins: [...createVitePlugins(env), vue()],
         // 设置打包路径
-        server: {
-            hmr: true, // 开启热更新
-            host: "0.0.0.0",
-            port: 3300,
-            open: true,
-        },
     };
 });
 

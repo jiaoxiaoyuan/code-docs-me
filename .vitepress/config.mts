@@ -12,7 +12,7 @@ export default defineConfig({
     description: metaData.description,
     head, // <head>内标签配置
 
-    cleanUrls: true,
+    // cleanUrls: true,
     lastUpdated: true, // 显示最后更新时间
 
     themeConfig, // 主题配置
