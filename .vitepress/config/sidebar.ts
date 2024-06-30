@@ -173,4 +173,19 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
             link: "/Essay/index2.md",
         },
     ],
+    //博客
+    "/Blog": [
+        {
+            text: "index",
+            link: "/Blog/index.md",
+        },
+        {
+            text: "index1",
+            link: "/Blog/index1.md",
+        },
+        {
+            text: "index2",
+            link: "/Blog/index2.md",
+        },
+    ],
 };
