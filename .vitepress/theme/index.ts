@@ -49,7 +49,7 @@ export default {
 
         const { frontmatter } = useData();
 
-        console.log("frontmatter.value.layout", frontmatter.value.layoutClass);
+        // console.log("frontmatter.value.layout", frontmatter.value.layoutClass);
 
         giscusTalk(
             {

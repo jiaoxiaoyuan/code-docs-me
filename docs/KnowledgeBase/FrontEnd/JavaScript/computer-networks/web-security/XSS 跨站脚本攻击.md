@@ -505,7 +505,7 @@ content-security-policy: default-scr https:; connect-src https:; font-src https:
 
 > 更多关于 CSP 的理解可以参考 [Content Security Policy（CSP）是什么？为什么它能低于 XSS 攻击？](https://www.zhihu.com/question/21979782)
 >
-> 或者查看关于 [HTTP CSP 内容安全策略](/computer-networks/http/content-security-policy) 的整理。
+<!-- > 或者查看关于 [HTTP CSP 内容安全策略](/computer-networks/http/content-security-policy) 的整理。 -->
 
 ### HTTPOnly Cookie
 

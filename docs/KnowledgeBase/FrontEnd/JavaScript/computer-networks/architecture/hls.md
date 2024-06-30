@@ -19,14 +19,14 @@ HLS 协议由三部分组成：
 在 HTML5 页面上使用 HLS 非常简单：
 
 ```html
-<video src="example.m3u8" controls></video>
+<!-- <video src="example.m3u8" controls></video> -->
 ```
 
 或者：
 
 ```html
 <video controls>
-  <source src="example.m3u8"></source>
+  <!-- <source src="example.m3u8"></source> -->
 </video>
 ```
 
