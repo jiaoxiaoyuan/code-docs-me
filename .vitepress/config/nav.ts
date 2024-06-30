@@ -7,7 +7,7 @@ export const nav: DefaultTheme.Config["nav"] = [
             {
                 text: "前端",
                 items: [
-                    { text: "HTML", link: "/KnowledgeBase/FrontEnd/HTML" },
+                    // { text: "HTML", link: "/KnowledgeBase/FrontEnd/HTML" },
                     { text: "CSS", link: "/KnowledgeBase/FrontEnd/CSS" },
                     {
                         text: "JavaScript",

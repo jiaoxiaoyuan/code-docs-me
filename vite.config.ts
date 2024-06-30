@@ -20,6 +20,10 @@ const viteConfig = defineConfig(({ mode, command }) => {
         // plugins: [vue()],
         plugins: [...createVitePlugins(env), vue()],
         // 设置打包路径
+        server: {
+            hmr: true, // 开启热更新
+            // 其他服务器选项...
+        },
     };
 });
 

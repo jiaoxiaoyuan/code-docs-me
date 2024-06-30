@@ -15,7 +15,7 @@
     };
 
 
-    function zeroPadding(num, digit) {
+    function zeroPadding(num:number, digit:number) {
         var zero = '';
         for(var i = 0; i < digit; i++) {
             zero += '0';
