@@ -42,7 +42,7 @@ titleTemplate: 欢迎来到我的博客
 
 <!-- <HomeIndex/> -->
 
-<script setup> 
+<script setup lang="ts"> 
 import IndexPage from '../page/Home/index.vue'; 
 </script>
 

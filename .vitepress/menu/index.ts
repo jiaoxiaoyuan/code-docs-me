@@ -1,1 +1,1 @@
-export { default as HTMLMD } from './HTML'
+export { default as HTMLMD } from "./HTML";
