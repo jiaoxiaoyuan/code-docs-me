@@ -31,6 +31,13 @@ const viteConfig = defineConfig(({ mode, command }) => {
                     intro: 'import "./style.css";',
                 },
             },
+            minify: "terser",
+            terserOptions: {
+                compress: {
+                    // 生产环境时移除 console
+                    pure_funcs: ["console.log"],
+                },
+            },
         },
     };
 });

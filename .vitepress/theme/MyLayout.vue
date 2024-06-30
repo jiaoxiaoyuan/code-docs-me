@@ -64,9 +64,7 @@ const hasSidebar = computed(() => {
             </template>
         </Layout>
 
-        <!-- <ClientOnly>
-            <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  />
-        </ClientOnly> -->
+    <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  />
 
 </template>
 
