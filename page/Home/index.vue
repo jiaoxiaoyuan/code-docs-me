@@ -54,9 +54,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+
   .content {
         position: absolute;
         top: 50%;
