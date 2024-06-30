@@ -13,7 +13,6 @@ import mediumZoom from "medium-zoom";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
-import APlayer from "@worstone/vue-aplayer";
 
 // import APlayer from "@moefe/vue-aplayer";
 
@@ -30,7 +29,7 @@ export default {
         // DefaultTheme.enhanceApp({ app, router, siteData });
         app.use(ElementPlus);
         // app.component("APlayer", APlayer);
-        app.component("APlayer", APlayer);
+        // app.component("APlayer", APlayer);
 
         useComponents(app);
     },
