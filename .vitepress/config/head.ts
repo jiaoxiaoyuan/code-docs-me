@@ -10,13 +10,28 @@ export const head: HeadConfig[] = [
                 "知识库, 个人博客,个人网站,个人主页,IT博客,技术博客,程序员博客个人博客,个人网站,个人主页,IT博客,技术博客,程序员博客",
         },
     ],
-    ["link", { rel: "icon", href: metaData.image }],
     ["meta", { name: "author", content: "Jixiaoyuan" }],
+    ["link", { rel: "icon", href: metaData.image }],
+    [
+        "link",
+        {
+            rel: "stylesheet",
+            href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+        },
+    ],
+
     [
         "meta",
         {
             name: "baidu-site-verification",
             content: "codeva-YylYjOSjF2",
+        },
+    ],
+    [
+        "meta",
+        {
+            name: "google-site-verification",
+            content: "9PfpWj_9VHtKGmyidDyvMGWZT3DujZ6Re0QoaaDkrD8",
         },
     ],
 

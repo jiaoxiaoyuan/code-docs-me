@@ -1,3 +1,8 @@
+* {
+    transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+}
+
 html,
 body {
     width: 100%;
