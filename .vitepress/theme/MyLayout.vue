@@ -23,35 +23,28 @@ const hasSidebar = computed(() => {
 });
 
 // https://www.npmjs.com/package/@worstone/vue-aplayer
-    const aplayer = ref<any>(null);
-    const audio = ref<any[]>([]);
+const aplayer = ref<any>(null);
+const audio = ref<any[]>([]);
 
-    onMounted(() => {
-        // 加载歌曲信息
-        let audios = [
-            {
-                name: '恋人',
-                artist: '李荣浩',
-                url: 'https://webfs.hw.kugou.com/202407010145/7df2933a684258601a04ad9660e5430b/KGTX/CLTX001/9da7851e2bf83b18c74cbbab461cefdd.mp3',
-                cover: 'https://imgessl.kugou.com/stdmusic/20240620/20240620141604988529.jpg',
-                lrc:''
-            },
-            {
-                name: 'Miracle',
-                artist: 'Miracle',
-                url: 'http://img.mtsws.cn/LightPicture/2023/08/4ce8472acedcc3fb.mp3',
-                cover: 'https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png',
-            },
-            {
-                name: 'Miracle',
-                artist: 'Miracle',
-                url: 'http://img.mtsws.cn/LightPicture/2023/08/7f5fe3e3ce593244.mp3',
-                cover: 'https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png',
-            },
-        ];
-        // 添加到播放器列表
-        aplayer.value.addList(audios);
-    });
+onMounted(() => {
+    // 加载歌曲信息
+    let audios = [
+        {
+            name: 'Miracle',
+            artist: 'Miracle',
+            url: 'http://img.mtsws.cn/LightPicture/2023/08/4ce8472acedcc3fb.mp3',
+            cover: 'https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png',
+        },
+        {
+            name: 'Miracle',
+            artist: 'Miracle',
+            url: 'http://img.mtsws.cn/LightPicture/2023/08/7f5fe3e3ce593244.mp3',
+            cover: 'https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png',
+        },
+    ];
+    // 添加到播放器列表
+    //aplayer.value.addList(audios);
+});
 
 </script>
 

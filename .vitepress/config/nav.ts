@@ -88,12 +88,12 @@ export const nav: DefaultTheme.Config["nav"] = [
             {
                 text: "编程软件",
                 items: [
-                    { text: "VSCode", link: "/Tools/VSCode" },
-                    { text: "Vim", link: "/Tools/Vim" },
-                    { text: "Dbeaver", link: "/Tools/Dbeaver" },
-                    { text: "Git", link: "/Tools/Git" },
-                    { text: "Docker", link: "/Tools/Docker" },
-                    { text: "Jenkins", link: "/Tools/Jenkins" },
+                    { text: "VSCode", link: "/Tools/Programming/VSCode" },
+                    { text: "Vim", link: "/Tools/Programming/Vim" },
+                    { text: "Dbeaver", link: "/Tools/Programming/Dbeaver" },
+                    { text: "Git", link: "/Tools/Programming/Git" },
+                    { text: "Docker", link: "/Tools/Programming/Docker" },
+                    { text: "Jenkins", link: "/Tools/Programming/Jenkins" },
                 ],
             },
             {
@@ -155,7 +155,7 @@ export const nav: DefaultTheme.Config["nav"] = [
             },
         ],
     },
-    { text: "资源导航", link: "Navigation", activeMatch: "/Navigation" },
+    { text: "资源导航", link: "/Navigation", activeMatch: "/Navigation" },
     { text: "技术杂文", link: "/Essay", activeMatch: "/Essay" },
     { text: "博客", link: "/Blog", activeMatch: "/Blog" },
     { text: "关于", link: "/About", activeMatch: "/About" },

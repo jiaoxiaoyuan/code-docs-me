@@ -166,6 +166,14 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
             ],
         },
     ],
+    // 工具-编程工具
+    "/Tools/Programming": [
+        {
+            text: "index",
+            link: "/Tools/Programming/VSCode.md",
+        },
+    ],
+
     // 技术杂文
     "/Essay": generateSidebarConfig(
         path.resolve(__dirname, "../../docs/Essay"),
