@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-        <div class="left"></div>
         <div class="content">
             第四页
         </div>
@@ -11,18 +10,41 @@
 
 <style scoped lang="scss">
 .container {
-    width: 100%;
+    flex: 1;
     height: 100vh;
     color: #fff;
-    background-color: #374046;
+    background-color: deeppink;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInOut 1s forwards;
 
-    .left {
-        width: 10%;
-        height: 100%;
-        background-color: #374046;
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        25% {
+            opacity: 0.25;
+            transition: all 0.3s ease-in-out;
+        }
+
+        50% {
+            opacity: 0.50;
+            transition: all 0.3s ease-in-out;
+        }
+
+        75% {
+            opacity: 0.75;
+            transition: all 0.3s ease-in-out;
+        }
+
+        100% {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
     }
 
     .content {

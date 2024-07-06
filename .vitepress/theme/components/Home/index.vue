@@ -6,32 +6,37 @@
             <div @click="increment(3)" class="icon fa fa-coffee"></div>
             <div @click="increment(4)" class="icon fa fa-dribbble"></div>
         </div>
+        <!-- <ComponentA v-if="typeNum === 1"></ComponentA>
+        <ComponentB v-if="typeNum === 2"></ComponentB>
+        <ComponentC v-if="typeNum === 3"></ComponentC>
+        <ComponentD v-if="typeNum === 4"></ComponentD> -->
 
-        <!-- {{ count }} -->
-         <component :is="currentComponent"></component>
+        <component :is="currentComponent"></component>
+
     </div>
 </template>
 <script setup lang="ts" >
 
-import { ref } from 'vue'
+import { ref, shallowRef } from 'vue'
 import ComponentA from './components/pageOne.vue'
 import ComponentB from './components/pageTwo.vue'
 import ComponentC from './components/pagThree.vue'
 import ComponentD from './components/pagFour.vue'
 
-const currentComponent = ref(ComponentA);
+const currentComponent = shallowRef<ComponentType>(ComponentA);
+const typeNum = ref(1)
 
-const increment = (e: number) => {
-
-    if (e === 1) {
-        currentComponent.value = ComponentA
-    } else if (e === 2) {
-        currentComponent.value = ComponentB
-    } else if (e === 3) {
-        currentComponent.value = ComponentC
-    } else if (e === 4) {
-        currentComponent.value = ComponentD;
-    }
+type ComponentType = typeof ComponentA | typeof ComponentB | typeof ComponentC | typeof ComponentD;
+// 定义组件映射表
+const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
+    1: ComponentA,
+    2: ComponentB,
+    3: ComponentC,
+    4: ComponentD,
+};
+const increment = (e: 1 | 2 | 3 | 4) => {
+    typeNum.value = e;
+    currentComponent.value = componentMap[e];
 };
 
 
@@ -40,24 +45,43 @@ const increment = (e: number) => {
 .app-container {
     height: 100vh;
     background-color: #374046;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     .app-segmented {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
         height: 280px;
-        width: 10%;
+        width: 100px;
         padding: 0;
         text-align: center;
-        // background: black;
 
         .icon {
             color: #fff;
             font-size: 32px;
             display: block;
             margin: 30px 0;
+            cursor: pointer;
+            // opacity: 1;
+            // -webkit-filter: blur(3px);
+            // filter: blur(3px);
+
+            &:hover {
+                color: #f5f5f5;
+                transform: scale(1.2);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:active {
+                transform: scale(1.1);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+
         }
     }
 }
