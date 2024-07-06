@@ -35,7 +35,7 @@ export default {
         //     productionTip: process.env.NODE_ENV !== "development",
         // });
 
-        useComponents(app);
+        useComponents({app, router, siteData});
     },
 
     setup() {
