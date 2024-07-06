@@ -7,5 +7,4 @@
 </template>
 
 <style scoped lang="scss">
-// .container {}
-</style>
+// .container {}</style>

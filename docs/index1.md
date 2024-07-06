@@ -18,9 +18,9 @@ hero:
 #   text: "爱音乐、爱折腾、爱生活"
   tagline: 90后码农，爱研究瞎折腾，爱文学烂笔头。
 #   image:
-#     src: ../logo.png 
-#     alt: VitePress 
-    
+#     src: ../logo.png
+#     alt: VitePress
+
   actions:
     - theme: brand
       text: Markdown Examples

@@ -18,7 +18,7 @@ titleTemplate: 欢迎来到我的博客
 #   text: "爱音乐、爱折腾、爱生活"
 #   tagline: 90后码农，爱研究瞎折腾，爱文学烂笔头。
 
-    
+
 #   actions:
 #     - theme: brand
 #       text: Markdown Examples
