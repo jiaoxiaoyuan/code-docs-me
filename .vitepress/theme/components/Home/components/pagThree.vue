@@ -16,7 +16,7 @@ import FooterView from './footer.vue';
     flex: 1;
     height: 100vh;
     color: #fff;
-    background-color: #593C1F;
+    // background-color: #593C1F;
     display: flex;
     flex-direction: column;
     align-items: center;

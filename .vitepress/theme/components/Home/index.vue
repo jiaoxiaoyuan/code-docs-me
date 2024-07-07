@@ -1,5 +1,5 @@
 <template>
-    <div class="app-container" :class="[typeNum === 1 ? 'app-container-activeClass' : '']">
+    <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
         <div class="app-segmented">
             <ul>
                 <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
@@ -25,8 +25,8 @@ import ComponentC from './components/pagThree.vue'
 import ComponentD from './components/pagFour.vue'
 
 const currentComponent = shallowRef<ComponentType>(ComponentA);
-const typeNum = ref(1)
-
+const typeNum = ref<number>(1)
+const Bgurl = ref<string>('https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg')
 type ComponentType = typeof ComponentA | typeof ComponentB | typeof ComponentC | typeof ComponentD;
 // 定义组件映射表
 const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
@@ -35,9 +35,17 @@ const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
     3: ComponentC,
     4: ComponentD,
 };
+const currentBgurl = {
+    1: 'https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg',
+    2: 'https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg',
+    3: 'https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg',
+    4: 'https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg',
+};
+
 const increment = (e: 1 | 2 | 3 | 4) => {
     typeNum.value = e;
     currentComponent.value = componentMap[e];
+    Bgurl.value = currentBgurl[e]
 };
 
 let Holiday = ref<string>('')
@@ -99,6 +107,9 @@ const getHitokotoData = async () => {
     hitokotoData.from = res?.from
 }
 
+
+
+
 onMounted(() => {
     getHitokotoData()
     getgetHolidayData()
@@ -113,10 +124,10 @@ onMounted(() => {
 <style scoped lang="scss">
 .app-container-activeClass {
     background-image: url("https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    background-blend-mode: multiply;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-color: rgba(0, 0, 0, 0.1) !important;
+    // background-blend-mode: multiply;
 }
 
 .app-container {
@@ -126,6 +137,10 @@ onMounted(() => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-blend-mode: multiply;
 
     .app-segmented {
         // height: 280px;
