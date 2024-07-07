@@ -90,8 +90,8 @@ const N = /* @__PURE__ */ j(Y), k = /mobile/i.test(window.navigator.userAgent), 
   },
   /**
    * Parse Lyric String to Array
-   *
-   * @param {String} lyricStr
+   * 
+   * @param {String} lyricStr 
    * @return {Array} [[0, "APlayer"], [1.2, "is"], [34.56, "Amazing"]]
    */
   parse(e) {
@@ -634,7 +634,7 @@ const O = [
     loop: {
       type: String,
       default: "all"
-      // "one", "all", "none"
+      // "one", "all", "none"  
     },
     order: {
       type: String,

@@ -14,7 +14,6 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 
-// import APlayerPlugin, { APlayer } from "@moefe/vue-aplayer";
 
 // 只需添加以下一行代码，引入时间线样式
 import "vitepress-markdown-timeline/dist/theme/index.css";
@@ -25,17 +24,12 @@ export default {
     // Layout: () => h(MyLayout),
     Layout: MyLayout,
 
-    enhanceApp({ app, router, siteData }: EnhanceAppContext) {
+    async enhanceApp({ app, router, siteData }: EnhanceAppContext) {
         // DefaultTheme.enhanceApp({ app, router, siteData });
         app.use(ElementPlus);
-        // app.component("APlayer", APlayer);
-        // app.component("APlayer", APlayer);
+        useComponents({ app, router, siteData });
 
-        // app.use<APlayer.InstallOptions>(APlayerPlugin, {
-        //     productionTip: process.env.NODE_ENV !== "development",
-        // });
 
-        useComponents({app, router, siteData});
     },
 
     setup() {
