@@ -3,11 +3,13 @@
         <div class="content">
             第二页
         </div>
-        <footer class="footer">底部信息</footer>
+        <FooterView></FooterView>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FooterView from './footer.vue';
+</script>
 
 <style scoped lang="scss">
 .container {
@@ -50,7 +52,6 @@
 
     }
 
-
     .content {
         flex: 1;
         display: flex;
@@ -58,16 +59,6 @@
         justify-content: center;
         font-size: 24px;
         font-weight: 700;
-    }
-
-    .footer {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        font-size: 14px;
-        color: #fff;
-        background-color: transparent;
     }
 }
 </style>

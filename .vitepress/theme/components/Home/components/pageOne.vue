@@ -7,13 +7,16 @@
             </section>
             <TimeView :Holiday="propsList?.Holiday" :yearTips="propsList?.yearTips" :Weather="propsList?.Weather" ></TimeView>
         </div>
-        <footer class="footer">底部信息</footer>
+        <!-- <footer class="footer">底部信息</footer> -->
+
+        <FooterView></FooterView>
     </div>
 </template>
 
 <script setup lang="ts">
 import BtnDraw from './BtnDraw.vue';
 import TimeView from './TimeView.vue';
+import FooterView from './footer.vue';
 const propsList = defineProps<{
     Holiday: string,
     yearTips: string,
@@ -85,18 +88,6 @@ const propsList = defineProps<{
                 transition: all 1s;
             }
         }
-
-
-    }
-
-    .footer {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        font-size: 14px;
-        color: #fff;
-        background-color: transparent;
     }
 }
 </style>
