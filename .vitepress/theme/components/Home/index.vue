@@ -8,16 +8,21 @@
                 <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
             </ul>
         </div>
-        <component :is="currentComponent"></component>
+        <!-- <component :is="currentComponent"></component> -->
+        <ComponentA v-if="typeNum === 1" :Holiday="Holiday" :yearTips="yearTips" :Weather="Weather" :hitokotoData="hitokotoData"></ComponentA>
+        <ComponentB v-if="typeNum === 2"></ComponentB>
+        <ComponentC v-if="typeNum === 3"></ComponentC>
+        <ComponentD v-if="typeNum === 4"></ComponentD>
     </div>
 </template>
 <script setup lang="ts" >
-import { ref, shallowRef } from 'vue'
+import { ElMessage } from 'element-plus'
+import { ref, shallowRef, onMounted, reactive } from 'vue'
+import { getHoliday, getIp, getWeather, getHitokoto } from '../../../api'
 import ComponentA from './components/pageOne.vue'
 import ComponentB from './components/pageTwo.vue'
 import ComponentC from './components/pagThree.vue'
 import ComponentD from './components/pagFour.vue'
-
 
 const currentComponent = shallowRef<ComponentType>(ComponentA);
 const typeNum = ref(1)
@@ -35,13 +40,83 @@ const increment = (e: 1 | 2 | 3 | 4) => {
     currentComponent.value = componentMap[e];
 };
 
+let Holiday = ref<string>('')
+let yearTips = ref<string>('')
+let Weather = ref<string>('')
+
+const getgetHolidayData = async () => {
+    let cd = new Date();
+    let day = zeroPadding(cd.getFullYear(), 4) + '' + zeroPadding(cd.getMonth() + 1, 2) + '' + zeroPadding(cd.getDate(), 2)
+    let res = await getHoliday(day)
+    if (res.code === 1) {
+        let { data } = res
+        yearTips.value = data?.yearTips + data?.lunarCalendar
+        Holiday.value = '本年度的第' + data?.weekOfYear + '周,' + '第' + data?.dayOfYear + '天'
+
+    } else {
+        ElMessage({
+            message: '获取节假日信息失败',
+            type: 'error',
+        })
+    }
+
+}
+
+function zeroPadding (num: number, digit: number) {
+    let zero = '';
+    for (var i = 0; i < digit; i++) {
+        zero += '0';
+    }
+    return (zero + num).slice(-digit);
+}
+
+const getWeatherData = async (city: string) => {
+    let res = await getWeather(city)
+    if (res.code === 1) {
+        let { address, weather, temp, windDirection } = res.data
+        let data = address + '' + weather + '' + temp + windDirection + '风'
+        Weather.value = data
+    }
+}
+
+let hitokotoData = reactive({
+    text: '时光匆匆，岁月静好。',
+    from: '無名'
+})
+
+const getIpWeatherData = async () => {
+    let res = await getIp()
+    if (res.code === 1) {
+        setTimeout(() => {
+            getWeatherData(res.data.city)
+        }, 3000)
+    }
+}
+
+const getHitokotoData = async () => {
+    let res = await getHitokoto()
+    hitokotoData.text = res?.hitokoto
+    hitokotoData.from = res?.from
+}
+
+onMounted(() => {
+    getHitokotoData()
+    getgetHolidayData()
+    setTimeout(() => {
+        getIpWeatherData()
+    }, 2000)
+
+})
+
 
 </script>
 <style scoped lang="scss">
 .app-container-activeClass {
-    background-image: url("https://img.mtsws.cn/LightPicture/2024/06/9e0b24ca3f2e3675.jpg");
+    background-image: url("https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-blend-mode: multiply;
 }
 
 .app-container {

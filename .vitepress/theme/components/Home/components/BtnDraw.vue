@@ -1,6 +1,12 @@
 
 <script setup lang="ts">
-console.log('BtnDraw')
+
+const data = defineProps<{
+    hitokotoData: { text: string, from: string }
+}>()
+
+
+
 </script>
 <template>
     <div size="20" class="homebuttons">
@@ -14,13 +20,24 @@ console.log('BtnDraw')
             <a class="btn-draw" href="/Blog"><span>博客</span></a>
         </el-space>
     </div>
+    <div class="content-text">
+        <span class="text">{{ data?.hitokotoData?.text }}</span>
+        <span class="from">-「&nbsp;{{ data?.hitokotoData.from }}&nbsp;」</span>
+    </div>
 </template>
-
-
 
 <style scoped lang="scss">
 .homebuttons {
     margin-top: 20px;
+}
+
+.content-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1em;
+    transition: all 1s;
 }
 
 @mixin btn-draw($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s) {

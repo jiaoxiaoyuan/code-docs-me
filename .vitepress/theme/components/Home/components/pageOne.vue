@@ -3,9 +3,9 @@
         <div class="content">
             <section>
                 <img src="https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png" alt="" />
-                <BtnDraw></BtnDraw>
+                <BtnDraw :hitokotoData="hitokotoData"></BtnDraw>
             </section>
-            <TimeView></TimeView>
+            <TimeView :Holiday="propsList?.Holiday" :yearTips="propsList?.yearTips" :Weather="propsList?.Weather" ></TimeView>
         </div>
         <footer class="footer">底部信息</footer>
     </div>
@@ -14,6 +14,14 @@
 <script setup lang="ts">
 import BtnDraw from './BtnDraw.vue';
 import TimeView from './TimeView.vue';
+const propsList = defineProps<{
+    Holiday: string,
+    yearTips: string,
+    Weather: string,
+    hitokotoData: { text: string, from: string }
+}>()
+
+
 </script>
 
 <style scoped lang="scss">
