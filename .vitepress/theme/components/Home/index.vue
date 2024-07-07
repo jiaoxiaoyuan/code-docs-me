@@ -1,21 +1,23 @@
 <template>
-    <div class="app-container">
+    <div class="app-container" :class="[typeNum === 1 ? 'app-container-activeClass' : '']">
         <div class="app-segmented">
-            <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
-            <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
-            <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
-            <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
+            <ul>
+                <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+                <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
+                <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
+                <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
+            </ul>
         </div>
         <component :is="currentComponent"></component>
     </div>
 </template>
 <script setup lang="ts" >
-
 import { ref, shallowRef } from 'vue'
 import ComponentA from './components/pageOne.vue'
 import ComponentB from './components/pageTwo.vue'
 import ComponentC from './components/pagThree.vue'
 import ComponentD from './components/pagFour.vue'
+
 
 const currentComponent = shallowRef<ComponentType>(ComponentA);
 const typeNum = ref(1)
@@ -36,6 +38,12 @@ const increment = (e: 1 | 2 | 3 | 4) => {
 
 </script>
 <style scoped lang="scss">
+.app-container-activeClass {
+    background-image: url("https://img.mtsws.cn/LightPicture/2024/06/9e0b24ca3f2e3675.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .app-container {
     height: 100vh;
     background-color: #374046;
@@ -45,14 +53,23 @@ const increment = (e: 1 | 2 | 3 | 4) => {
     justify-content: center;
 
     .app-segmented {
-        height: 280px;
+        // height: 280px;
+        height: 100vh;
         width: 100px;
-        padding: 0;
         text-align: center;
+        background-color: rgba(55, 64, 70, 0.2);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
 
         .icon {
             color: #fff;
-            font-size: 30px;
+            font-size: 24px;
             display: block;
             margin: 30px 0;
             cursor: pointer;

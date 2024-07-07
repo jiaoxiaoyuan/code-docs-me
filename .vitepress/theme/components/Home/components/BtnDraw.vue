@@ -25,9 +25,7 @@ console.log('BtnDraw')
 
 @mixin btn-draw($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s) {
     position: relative;
-
     display: inline-block;
-
     color: $color;
     border-bottom: $width solid $color;
     cursor: pointer;

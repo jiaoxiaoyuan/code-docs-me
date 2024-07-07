@@ -1,19 +1,25 @@
 <template>
     <div class="container">
         <div class="content">
-        第一页
+            <section>
+                <img src="https://img.mtsws.cn/LightPicture/2023/08/8b794e021120837b.png" alt="" />
+                <BtnDraw></BtnDraw>
+            </section>
+            <TimeView></TimeView>
         </div>
         <footer class="footer">底部信息</footer>
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BtnDraw from './BtnDraw.vue';
+import TimeView from './TimeView.vue';
+</script>
 
 <style scoped lang="scss">
 .container {
     flex: 1;
     height: 100vh;
-    background-color: #374046;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +63,22 @@
         font-size: 24px;
         font-weight: 700;
         color: #fff;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px #fff;
+                transition: all 1s;
+            }
+        }
+
+
     }
 
     .footer {
