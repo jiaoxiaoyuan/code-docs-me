@@ -1,14 +1,13 @@
 <template>
   <div class="container">
-        <div class="content">
-            第四页
-        </div>
-        <FooterView></FooterView>
+    <FourContent></FourContent>
+    <!-- <FooterView></FooterView> -->
   </div>
 </template>
 
 <script setup lang="ts">
-import FooterView from './footer.vue';
+// import FooterView from "./footer.vue";
+import FourContent from "./pagFourContent.vue";
 </script>
 
 <style scoped lang="scss">
@@ -16,11 +15,8 @@ import FooterView from './footer.vue';
     flex: 1;
     height: 100vh;
     color: #fff;
-    // background-color: deeppink;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     animation: fadeInOut 1s forwards;
 
     @keyframes fadeInOut {
@@ -35,7 +31,7 @@ import FooterView from './footer.vue';
         }
 
         50% {
-            opacity: 0.50;
+            opacity: 0.5;
             transition: all 0.3s ease-in-out;
         }
 
@@ -48,18 +44,15 @@ import FooterView from './footer.vue';
             opacity: 1;
             transition: all 0.3s ease-in-out;
         }
-
     }
 
     .content {
         flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         font-size: 24px;
         font-weight: 700;
     }
-
-
 }
 </style>
