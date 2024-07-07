@@ -1,18 +1,12 @@
 <template>
     <div class="app-container">
         <div class="app-segmented">
-            <div @click="increment(1)" class="icon fa fa-home"></div>
-            <div @click="increment(2)" class="icon fa fa-keyboard-o"></div>
-            <div @click="increment(3)" class="icon fa fa-coffee"></div>
-            <div @click="increment(4)" class="icon fa fa-dribbble"></div>
+            <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+            <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
+            <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
+            <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
         </div>
-        <!-- <ComponentA v-if="typeNum === 1"></ComponentA>
-        <ComponentB v-if="typeNum === 2"></ComponentB>
-        <ComponentC v-if="typeNum === 3"></ComponentC>
-        <ComponentD v-if="typeNum === 4"></ComponentD> -->
-
         <component :is="currentComponent"></component>
-
     </div>
 </template>
 <script setup lang="ts" >
@@ -58,16 +52,14 @@ const increment = (e: 1 | 2 | 3 | 4) => {
 
         .icon {
             color: #fff;
-            font-size: 32px;
+            font-size: 30px;
             display: block;
             margin: 30px 0;
             cursor: pointer;
-            // opacity: 1;
-            // -webkit-filter: blur(3px);
-            // filter: blur(3px);
 
             &:hover {
                 color: #f5f5f5;
+                opacity: 0.6;
                 transform: scale(1.2);
                 transition: all 0.3s ease-in-out;
             }
@@ -82,6 +74,12 @@ const increment = (e: 1 | 2 | 3 | 4) => {
             }
 
 
+        }
+
+        .activeClass {
+            transform: scale(1.5);
+            color: #fff;
+            transition: all 0.3s ease-in-out
         }
     }
 }

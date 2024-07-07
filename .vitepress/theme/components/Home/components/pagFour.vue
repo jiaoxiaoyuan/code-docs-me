@@ -3,6 +3,7 @@
         <div class="content">
             第四页
         </div>
+        <footer class="footer">底部信息</footer>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
     color: #fff;
     background-color: deeppink;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     animation: fadeInOut 1s forwards;
@@ -49,10 +51,21 @@
 
     .content {
         flex: 1;
-        justify-self: center;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 24px;
         font-weight: 700;
+    }
+
+    .footer {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        background-color: transparent;
     }
 }
 </style>
