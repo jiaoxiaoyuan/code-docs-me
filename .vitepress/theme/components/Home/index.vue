@@ -1,33 +1,61 @@
 <template>
-    <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
-        <div class="app-segmented">
-            <ul>
-                <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
-                <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
-                <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
-                <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
-            </ul>
-        </div>
-        <!-- <component :is="currentComponent"></component> -->
-        <ComponentA v-if="typeNum === 1" :Holiday="Holiday" :yearTips="yearTips" :Weather="Weather" :hitokotoData="hitokotoData"></ComponentA>
-        <ComponentB v-if="typeNum === 2"></ComponentB>
-        <ComponentC v-if="typeNum === 3"></ComponentC>
-        <ComponentD v-if="typeNum === 4"></ComponentD>
+  <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
+    <div class="app-segmented">
+      <ul>
+        <div
+          @click="increment(1)"
+          class="icon fa fa-home"
+          :class="[typeNum === 1 ? 'activeClass' : '']"
+        ></div>
+        <div
+          @click="increment(2)"
+          class="icon fa fa-keyboard-o"
+          :class="[typeNum === 2 ? 'activeClass' : '']"
+        ></div>
+        <div
+          @click="increment(3)"
+          class="icon fa fa-coffee"
+          :class="[typeNum === 3 ? 'activeClass' : '']"
+        ></div>
+        <div
+          @click="increment(4)"
+          class="icon fa fa-dribbble"
+          :class="[typeNum === 4 ? 'activeClass' : '']"
+        ></div>
+      </ul>
     </div>
+    <!-- <component :is="currentComponent"></component> -->
+    <ComponentA
+      v-show="typeNum === 1"
+      :Holiday="Holiday"
+      :yearTips="yearTips"
+      :Weather="Weather"
+      :hitokotoData="hitokotoData"
+    ></ComponentA>
+    <ComponentB v-show="typeNum === 2"></ComponentB>
+    <ComponentC v-show="typeNum === 3"></ComponentC>
+    <ComponentD v-show="typeNum === 4"></ComponentD>
+  </div>
 </template>
-<script setup lang="ts" >
-import { ElMessage } from 'element-plus'
-import { ref, shallowRef, onMounted, reactive } from 'vue'
-import { getHoliday, getIp, getWeather, getHitokoto } from '../../../api'
-import ComponentA from './components/pageOne.vue'
-import ComponentB from './components/pageTwo.vue'
-import ComponentC from './components/pagThree.vue'
-import ComponentD from './components/pagFour.vue'
+<script setup lang="ts">
+import { ElMessage } from "element-plus";
+import { ref, shallowRef, onMounted, reactive } from "vue";
+import { getHoliday, getIp, getWeather, getHitokoto } from "../../../api";
+import ComponentA from "./components/pageOne.vue";
+import ComponentB from "./components/pageTwo.vue";
+import ComponentC from "./components/pagThree.vue";
+import ComponentD from "./components/pagFour.vue";
 
 const currentComponent = shallowRef<ComponentType>(ComponentA);
-const typeNum = ref<number>(1)
-const Bgurl = ref<string>('https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg')
-type ComponentType = typeof ComponentA | typeof ComponentB | typeof ComponentC | typeof ComponentD;
+const typeNum = ref<number>(1);
+const Bgurl = ref<string>(
+    "https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg"
+);
+type ComponentType =
+    | typeof ComponentA
+    | typeof ComponentB
+    | typeof ComponentC
+    | typeof ComponentD;
 // 定义组件映射表
 const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
     1: ComponentA,
@@ -36,90 +64,88 @@ const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
     4: ComponentD,
 };
 const currentBgurl = {
-    1: 'https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg',
-    2: 'https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg',
-    3: 'https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg',
-    4: 'https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg',
+    1: "https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg",
+    2: "https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg",
+    3: "https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg",
+    4: "https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg",
 };
 
 const increment = (e: 1 | 2 | 3 | 4) => {
     typeNum.value = e;
     currentComponent.value = componentMap[e];
-    Bgurl.value = currentBgurl[e]
+    Bgurl.value = currentBgurl[e];
 };
 
-let Holiday = ref<string>('')
-let yearTips = ref<string>('')
-let Weather = ref<string>('')
+let Holiday = ref<string>("");
+let yearTips = ref<string>("");
+let Weather = ref<string>("");
 
 const getgetHolidayData = async () => {
     let cd = new Date();
-    let day = zeroPadding(cd.getFullYear(), 4) + '' + zeroPadding(cd.getMonth() + 1, 2) + '' + zeroPadding(cd.getDate(), 2)
-    let res = await getHoliday(day)
+    let day =
+        zeroPadding(cd.getFullYear(), 4) +
+        "" +
+        zeroPadding(cd.getMonth() + 1, 2) +
+        "" +
+        zeroPadding(cd.getDate(), 2);
+    let res = await getHoliday(day);
     if (res.code === 1) {
-        let { data } = res
-        yearTips.value = data?.yearTips + data?.lunarCalendar
-        Holiday.value = '本年度的第' + data?.weekOfYear + '周,' + '第' + data?.dayOfYear + '天'
-
+        let { data } = res;
+        yearTips.value = data?.yearTips + data?.lunarCalendar;
+        Holiday.value =
+            "本年度的第" + data?.weekOfYear + "周," + "第" + data?.dayOfYear + "天";
     } else {
         ElMessage({
-            message: '获取节假日信息失败',
-            type: 'error',
-        })
+            message: "获取节假日信息失败",
+            type: "error",
+        });
     }
-
-}
+};
 
 function zeroPadding (num: number, digit: number) {
-    let zero = '';
+    let zero = "";
     for (var i = 0; i < digit; i++) {
-        zero += '0';
+        zero += "0";
     }
     return (zero + num).slice(-digit);
 }
 
 const getWeatherData = async (city: string) => {
-    let res = await getWeather(city)
+    let res = await getWeather(city);
     if (res.code === 1) {
-        let { address, weather, temp, windDirection } = res.data
-        let data = address + '' + weather + '' + temp + windDirection + '风'
-        Weather.value = data
+        let { address, weather, temp, windDirection } = res.data;
+        let data = address + "" + weather + "" + temp + windDirection + "风";
+        Weather.value = data;
     }
-}
+};
 
 let hitokotoData = reactive({
-    text: '时光匆匆，岁月静好。',
-    from: '無名'
-})
+    text: "时光匆匆，岁月静好。",
+    from: "無名",
+});
 
 const getIpWeatherData = async () => {
-    let res = await getIp()
+    let res = await getIp();
     if (res.code === 1) {
         setTimeout(() => {
-            getWeatherData(res.data.city)
-        }, 3000)
+            getWeatherData(res.data.city);
+        }, 3000);
     }
-}
+};
 
 const getHitokotoData = async () => {
-    let res = await getHitokoto()
-    hitokotoData.text = res?.hitokoto
-    hitokotoData.from = res?.from
-}
-
-
-
+    let res = await getHitokoto();
+    hitokotoData.text = res?.hitokoto;
+    hitokotoData.from = res?.from;
+};
 
 onMounted(() => {
-    getHitokotoData()
-    getgetHolidayData()
+    getHitokotoData();
+    getgetHolidayData();
     setTimeout(() => {
-        getIpWeatherData()
-    }, 2000)
-
-})
-
-
+        getIpWeatherData();
+    }, 2000);
+});
 </script>
 <style scoped lang="scss">
 .app-container-activeClass {
@@ -179,16 +205,13 @@ onMounted(() => {
             &:focus {
                 outline: none;
             }
-
-
         }
 
         .activeClass {
             transform: scale(1.5);
             color: #fff;
-            transition: all 0.3s ease-in-out
+            transition: all 0.3s ease-in-out;
         }
     }
 }
 </style>
-
