@@ -4,11 +4,6 @@ import { defineClientComponent } from 'vitepress'
 
 // https://www.npmjs.com/package/@worstone/vue-aplayer
 const aplayer = ref<any>(null);
-
-
-
-
-
 const audio = ref<any[]>([
     {
         "title": "重生之我在异乡为异客",
