@@ -2,26 +2,10 @@
   <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
     <div class="app-segmented">
       <ul>
-        <div
-          @click="increment(1)"
-          class="icon fa fa-home"
-          :class="[typeNum === 1 ? 'activeClass' : '']"
-        ></div>
-        <div
-          @click="increment(2)"
-          class="icon fa fa-keyboard-o"
-          :class="[typeNum === 2 ? 'activeClass' : '']"
-        ></div>
-        <div
-          @click="increment(3)"
-          class="icon fa fa-coffee"
-          :class="[typeNum === 3 ? 'activeClass' : '']"
-        ></div>
-        <div
-          @click="increment(4)"
-          class="icon fa fa-dribbble"
-          :class="[typeNum === 4 ? 'activeClass' : '']"
-        ></div>
+            <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+            <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
+            <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
+            <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
       </ul>
     </div>
     <!-- <component :is="currentComponent"></component> -->
@@ -39,7 +23,7 @@
 </template>
 <script setup lang="ts">
 import { ElMessage } from "element-plus";
-import { ref, shallowRef, onMounted, reactive } from "vue";
+import { ref, shallowRef, onMounted, onBeforeMount, reactive } from "vue";
 import { getHoliday, getIp, getWeather, getHitokoto } from "../../../api";
 import ComponentA from "./components/pageOne.vue";
 import ComponentB from "./components/pageTwo.vue";
@@ -139,11 +123,11 @@ const getHitokotoData = async () => {
     hitokotoData.from = res?.from;
 };
 
-onMounted(() => {
-    getHitokotoData();
-    getgetHolidayData();
-    setTimeout(() => {
-        getIpWeatherData();
+onBeforeMount(async () => {
+    await getHitokotoData();
+    await getgetHolidayData();
+    setTimeout(async () => {
+        await getIpWeatherData();
     }, 2000);
 });
 </script>

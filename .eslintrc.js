@@ -69,7 +69,7 @@ module.exports = {
 		'no-restricted-syntax': 'off',
 		// 强制 generator 函数中 * 号周围使⽤⼀致的空格
 		// 'generator-star-spacing': 'off',
-		'generator-star-spacing': [2, { before: true, after: true }],
+		'generator-star-spacing': [4, { before: true, after: true }],
 		'no-unreachable': 'off',
 		'no-multiple-template-root': 'off',
 		// 'no-unused-vars': 'error',

@@ -46,13 +46,6 @@ import FourContent from "./pagFourContent.vue";
         }
     }
 
-    .content {
-        flex: 1;
-        display: flex;
-        // align-items: center;
-        // justify-content: center;
-        font-size: 24px;
-        font-weight: 700;
-    }
+
 }
 </style>
