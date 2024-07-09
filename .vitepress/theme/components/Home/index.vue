@@ -9,13 +9,7 @@
       </ul>
     </div>
     <!-- <component :is="currentComponent"></component> -->
-    <ComponentA
-      v-show="typeNum === 1"
-      :Holiday="Holiday"
-      :yearTips="yearTips"
-      :Weather="Weather"
-      :hitokotoData="hitokotoData"
-    ></ComponentA>
+    <ComponentA v-show="typeNum === 1" :Holiday="Holiday" :yearTips="yearTips" :Weather="Weather" :hitokotoData="hitokotoData"></ComponentA>
     <ComponentB v-show="typeNum === 2"></ComponentB>
     <ComponentC v-show="typeNum === 3"></ComponentC>
     <ComponentD v-show="typeNum === 4"></ComponentD>
@@ -23,7 +17,7 @@
 </template>
 <script setup lang="ts">
 import { ElMessage } from "element-plus";
-import { ref, shallowRef, onMounted, onBeforeMount, reactive } from "vue";
+import { ref, shallowRef, onMounted, reactive, onServerPrefetch } from "vue";
 import { getHoliday, getIp, getWeather, getHitokoto } from "../../../api";
 import ComponentA from "./components/pageOne.vue";
 import ComponentB from "./components/pageTwo.vue";
@@ -123,21 +117,27 @@ const getHitokotoData = async () => {
     hitokotoData.from = res?.from;
 };
 
-onBeforeMount(async () => {
+onServerPrefetch(async () => {
+    await getHitokotoData();
+    await getgetHolidayData();
+    setTimeout(async () => {
+        await getIpWeatherData();
+    }, 2000);
+})
+
+onMounted(async () => {
     await getHitokotoData();
     await getgetHolidayData();
     setTimeout(async () => {
         await getIpWeatherData();
     }, 2000);
 });
+
+
 </script>
 <style scoped lang="scss">
 .app-container-activeClass {
     background-image: url("https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg");
-    // background-size: cover;
-    // background-attachment: fixed;
-    // background-color: rgba(0, 0, 0, 0.1) !important;
-    // background-blend-mode: multiply;
 }
 
 .app-container {
