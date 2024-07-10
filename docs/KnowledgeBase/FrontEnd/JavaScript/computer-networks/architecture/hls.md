@@ -18,23 +18,13 @@ HLS 协议由三部分组成：
 
 在 HTML5 页面上使用 HLS 非常简单：
 
-```html
-<!-- <video src="example.m3u8" controls></video> -->
-```
 
-或者：
-
-```html
-<video controls>
-  <!-- <source src="example.m3u8"></source> -->
-</video>
-```
 
 ## M3U8 索引文件
 
 HLS 的 m3u8 文件，是一个 TS 的列表，也就是告诉浏览器可以播放这些 TS 文件：
 
-```m3u8
+```
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-MEDIA-SEQUENCE:64
