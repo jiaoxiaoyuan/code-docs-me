@@ -23,8 +23,6 @@ const hasSidebar = computed(() => {
 });
 
 
-
-
 </script>
 
 <template>

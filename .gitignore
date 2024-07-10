@@ -8,3 +8,4 @@ dist/
 
 yarn.lock
 .vitepress/.temp/
+.vitepress/dist/
