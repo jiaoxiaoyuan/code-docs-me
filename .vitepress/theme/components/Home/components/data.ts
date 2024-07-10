@@ -346,6 +346,18 @@ export const NAV_DATA: NavData[] = [
                 link: "https://vueuse.org",
             },
             {
+                icon: "https://vueuse.org/favicon.svg",
+                title: "VueUse中文网",
+                desc: "Vue Composition API 的常用工具集",
+                link: "https://vueuse.nodejs.cn/",
+            },
+            {
+                icon: "https://svelte.dev/svelte-logo-horizontal.svg",
+                title: "Svelte",
+                desc: "将声明性组件转换为精准高效更新 DOM 的 JavaScript 代码",
+                link: "https://svelte.dev",
+            },
+            {
                 icon: "https://zh-hans.react.dev/favicon-32x32.png",
                 title: "React官网",
                 desc: "React官网",
@@ -484,6 +496,24 @@ export const NAV_DATA: NavData[] = [
                 link: "https://www.purgecss.cn/",
             },
             {
+                icon: "https://postcss.org/assets/logo-3e39b0aa.svg",
+                title: "PostCSS",
+                desc: "一个用 JavaScript 转换 CSS 的工具",
+                link: "https://postcss.org",
+            },
+            {
+                icon: "https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg",
+                title: "Sass",
+                desc: "一个成熟，稳定，功能强大的专业级 CSS 扩展语言",
+                link: "https://sass-lang.com",
+            },
+            {
+                icon: "https://www.tailwindcss.cn/apple-touch-icon.png",
+                title: "TailwindCSS 中文网",
+                desc: "一个功能类优先的 CSS 框架",
+                link: "https://www.tailwindcss.cn",
+            },
+            {
                 icon: "https://pnpm.io/zh/img/favicon.png",
                 title: "PNPM",
                 desc: "快速的，节省磁盘空间的包管理工具",
@@ -500,6 +530,12 @@ export const NAV_DATA: NavData[] = [
                 title: "npm 中文文档网",
                 desc: "npm 注册表、网站、以及命令行接口的文档。",
                 link: "https://npm.nodejs.cn/",
+            },
+            {
+                icon: "http://www.axios-js.com/icon/apple-touch-icon-152x152.png",
+                title: "axios中文文档",
+                desc: "Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。",
+                link: "https://axios-http.com/zh/",
             },
         ]
     },
@@ -554,7 +590,12 @@ export const NAV_DATA: NavData[] = [
                 desc: '华为鸿蒙HarmonyOS系统是面向万物互联的全场景分布式操作系统，支持手机、平板、智能穿戴、智慧屏等多种终端设备运行',
                 link: "https://developer.huawei.com/consumer/cn/doc/",
             },
-
+            {
+                icon: "https://ohpm.openharmony.cn/favicon.ico",
+                title: "OpenHarmony三方库中心仓",
+                desc: '华为鸿蒙HarmonyOS系统是面向万物互联的全场景分布式操作系统，支持手机、平板、智能穿戴、智慧屏等多种终端设备运行',
+                link: "https://ohpm.openharmony.cn/#/cn/home",
+            },
             {
                 icon: "https://docs.flutter.dev/assets/images/branding/flutter/icon/64.png",
                 title: "Flutter官网",
@@ -711,6 +752,129 @@ export const NAV_DATA: NavData[] = [
                 desc: "uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信/支付宝/百度/头条/飞书/QQ/快手/钉钉/淘宝）、快应用等多个平台。",
                 link: "https://uniapp.dcloud.net.cn/",
             },
+            {
+                icon: "https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png",
+                title: "微信小程序文档",
+                desc: "微信小程序官方开发者文档",
+                link: "https://developers.weixin.qq.com/miniprogram/dev/framework/",
+            },
+        ]
+    },
+    {
+        title: "技术文档(服务端)",
+        items: [
+            {
+                icon: "https://nodejs.org/static/images/favicons/favicon.png",
+                title: "nodejs官网",
+                desc: "nodejs官网",
+                link: "https://nodejs.org",
+            },
+            {
+                icon: "https://docs.nestjs.com/favicon.ico",
+                title: "nestjs官网",
+                desc: "Nest (NestJS) 是一个用于构建高效、可扩展的 Node.js 服务器端应用的框架。",
+                link: "https://docs.nestjs.com/",
+            },
+            {
+                icon: "https://docs.nestjs.com/favicon.ico",
+                title: "nestjs中文网",
+                desc: "Nest (NestJS) 是一个用于构建高效、可扩展的 Node.js 服务器端应用的框架。",
+                link: "https://nest.nodejs.cn/",
+            },
+            {
+                icon: "https://expressjs.com/images/favicon.png",
+                title: "Express",
+                desc: "Express 是一种保持最低程度规模的灵活 Node.js Web 应用程序框架，为 Web 和移动应用程序提供一组强大的功能",
+                link: "https://expressjs.com/zh-cn/",
+            },
+            {
+                icon: "https://koa.nodejs.cn/public/favicon.png",
+                title: "Koa",
+                desc: "Koa 是由 Express 背后的团队设计的一个新的 Web 框架，旨在成为 Web 应用和 API 的更小、更具表现力和更强大的基础。",
+                link: "https://koa.nodejs.cn/",
+            },
+            {
+                icon: "https://www.midwayjs.org/img/logo.svg",
+                title: "Midway",
+                desc: "Midway 是阿里巴巴 - 淘宝前端架构团队，基于渐进式理念研发的 Node.js 框架，通过自研的依赖注入容器，搭配各种上层模块，组合出适用于不同场景的解决方案。",
+                link: "https://www.midwayjs.org/",
+            },
+            {
+                icon: "https://www.eggjs.org/favicon.png",
+                title: "Egg",
+                desc: "Egg.js 为企业级框架和应用而生。",
+                link: "https://www.eggjs.org/zh-CN",
+            }
+        ]
+    },
+    {
+        title: "UI框架",
+        items: [
+            {
+                icon: "https://element.eleme.cn/favicon.ico",
+                title: "Element Plus",
+                desc: "基于 Vue 3，面向设计师和开发者的组件库",
+                link: "https://element-plus.org/zh-CN/#/zh-CN",
+            },
+            {
+                icon: "https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png",
+                title: "Ant Design",
+                desc: "antd 为 Web 应用提供了丰富的基础 UI 组件，我们还将持续探索企业级应用的最佳 UI 实践。",
+                link: "https://ant-design.antgroup.com/index-cn",
+            },
+            {
+                icon: "https://static.tdesign.tencent.com/favicon.ico",
+                title: "TDesign",
+                desc: "TDesign 是腾讯开源的企业级设计体系，提供了统一价值观，一致的设计语言和视觉风格，和开箱即用的 UI 组件库。",
+                link: "https://tdesign.tencent.com",
+            },
+            {
+                icon: "https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico",
+                title: "arco design",
+                desc: "字节跳动出品的企业级设计系统",
+                link: "https://arco.design/",
+            },
+            {
+                icon: "https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico",
+                title: "Semi design",
+                desc: "由抖音前端与 UED 团队维护，易于定制的现代化设计系统，帮助设计师与开发者打造高质量产品。",
+                link: "https://semi.design/zh-CN/",
+            },
+            {
+                icon: "https://fastly.jsdelivr.net/npm/@vant/assets/logo.png",
+                title: "Vant",
+                desc: "轻量、可定制的移动端 Vue 组件库",
+                link: "https://vant-ui.github.io/vant",
+            },
+            {
+                icon: "https://webapp.didistatic.com/static/webapp/shield/Cube-UI_logo.ico",
+                title: "Cube UI",
+                desc: "基于 Vue.js 实现的精致移动端组件库",
+                link: "https://didi.github.io/cube-ui",
+            },
+            {
+                icon: "https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png",
+                title: "NutUI",
+                desc: "京东风格的轻量级移动端组件库",
+                link: "https://nutui.jd.com",
+            },
+        ]
+    },
+    {
+        title: "开发库",
+        items: [
+            {
+                icon: "https://www.attojs.com/logo@32px.png",
+                title: "VueRequest",
+                desc: "一个 Vue 请求库",
+                link: "https://www.attojs.com/",
+            },
+            {
+                icon: "https://malagu.cellbang.com/favicon.ico",
+                title: "Malagu",
+                desc: "Malagu 是基于 TypeScript 的 Serverless First、组件化、平台无关的渐进式应用框架。",
+                link: "https://malagu.cellbang.com",
+            }
         ]
     },
     {
@@ -773,289 +937,7 @@ export const NAV_DATA: NavData[] = [
             },
         ],
     },
-    {
-        title: "茂茂的站点导航",
-        items: [
-            {
-                icon: "/logo.png",
-                title: "前端日常笔记",
-                desc: "日常笔记记录（零零散散啥都记系列）",
-                link: "https://github.com/maomao1996/daily-notes",
-            },
-            {
-                icon: "/logo.png",
-                title: "前端思维导图",
-                desc: "用思维导图的方式总结个人所学知识",
-                link: "https://mindmap.fe-mm.com",
-            },
-            {
-                icon: "https://qwerty.fe-mm.com/apple-touch-icon.png",
-                title: "Qwerty Learner",
-                desc: "为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件",
-                link: "https://qwerty.fe-mm.com",
-            },
-            {
-                icon: "/logo.png",
-                title: "mmPlayer",
-                desc: "mmPlayer 在线音乐播放器",
-                link: "https://netease-music.fe-mm.com",
-            },
-        ],
-    },
-    {
-        title: "React 生态",
-        items: [
-            {
-                icon: "https://zh-hans.reactjs.org/favicon.ico",
-                title: "React",
-                desc: "用于构建用户界面的 JavaScript 库",
-                link: "https://zh-hans.reactjs.org",
-            },
-            {
-                icon: "https://reactrouter.com/favicon-light.png",
-                title: "React Router",
-                desc: "React 的声明式路由",
-                link: "https://reactrouter.com",
-            },
-            {
-                icon: "https://nextjs.org/static/favicon/safari-pinned-tab.svg",
-                title: "Next.js",
-                desc: "一个用于 Web 的 React 框架",
-                link: "https://nextjs.org",
-            },
-            {
-                icon: "https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg",
-                title: "UmiJS",
-                desc: "插件化的企业级前端应用框架",
-                link: "https://umijs.org",
-            },
-            {
-                icon: "https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png",
-                title: "Ant Design",
-                desc: "一套企业级 UI 设计语言和 React 组件库",
-                link: "https://ant.design",
-            },
-            {
-                icon: "https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg",
-                title: "Ant Design Mobile",
-                desc: "构建移动 WEB 应用程序的 React 组件库",
-                link: "https://mobile.ant.design",
-            },
-            {
-                icon: "https://docs.pmnd.rs/apple-touch-icon.png",
-                title: "Zustand",
-                desc: "一个小型、快速、可扩展的 React 状态管理解决方案",
-                link: "https://docs.pmnd.rs/zustand/getting-started/introduction",
-            },
-            {
-                icon: "https://valtio.pmnd.rs/favicon.ico",
-                title: "Valtio",
-                desc: "makes proxy-state simple for React and Vanilla",
-                link: "https://valtio.pmnd.rs",
-            },
-            {
-                icon: "https://jotai.org/favicon.svg",
-                title: "Jotai",
-                desc: "primitive and flexible state management for React",
-                link: "https://jotai.org",
-            },
-            {
-                icon: "https://cn.redux.js.org/img/redux.svg",
-                title: "Redux",
-                desc: "JavaScript 应用的状态容器，提供可预测的状态管理",
-                link: "https://cn.redux.js.org",
-            },
-            {
-                icon: "https://zh.mobx.js.org/assets/mobx.png",
-                title: "MobX",
-                desc: "一个小型、快速、可扩展的 React 状态管理解决方案",
-                link: "https://zh.mobx.js.org",
-            },
-            {
-                icon: "https://ahooks.js.org/simple-logo.svg",
-                title: "ahooks",
-                desc: "一套高质量可靠的 React Hooks 库",
-                link: "https://ahooks.js.org/zh-CN",
-            },
-        ],
-    },
-    {
-        title: "Vue 生态",
-        items: [
-            {
-                icon: "https://cn.vuejs.org/logo.svg",
-                title: "Vue 3",
-                desc: "渐进式 JavaScript 框架",
-                link: "https://cn.vuejs.org",
-            },
-            {
-                icon: "https://cn.vuejs.org/logo.svg",
-                title: "Vue 2",
-                desc: "渐进式 JavaScript 框架",
-                link: "https://v2.cn.vuejs.org",
-            },
-            {
-                icon: "https://cn.vuejs.org/logo.svg",
-                title: "Vue Router",
-                desc: "Vue.js 的官方路由\n为 Vue.js 提供富有表现力、可配置的、方便的路由",
-                link: "https://router.vuejs.org/zh",
-            },
-            {
-                icon: "https://pinia.vuejs.org/logo.svg",
-                title: "Pinia",
-                desc: "符合直觉的 Vue.js 状态管理库",
-                link: "https://pinia.vuejs.org/zh",
-            },
-            {
-                icon: "https://nuxt.com/icon.png",
-                title: "Nuxt.js",
-                desc: "一个基于 Vue.js 的通用应用框架",
-                link: "https://nuxt.com",
-            },
-            {
-                icon: "https://vueuse.org/favicon.svg",
-                title: "VueUse",
-                desc: "Vue Composition API 的常用工具集",
-                link: "https://vueuse.org",
-            },
-            {
-                icon: "https://element-plus.org/images/element-plus-logo-small.svg",
-                title: "Element Plus",
-                desc: "基于 Vue 3，面向设计师和开发者的组件库",
-                link: "https://element-plus.org",
-            },
-            {
-                icon: "https://www.antdv.com/assets/logo.1ef800a8.svg",
-                title: "Ant Design Vue",
-                desc: "Ant Design 的 Vue 实现，开发和服务于企业级后台产品",
-                link: "https://antdv.com",
-            },
-            {
-                icon: "https://fastly.jsdelivr.net/npm/@vant/assets/logo.png",
-                title: "Vant",
-                desc: "轻量、可定制的移动端 Vue 组件库",
-                link: "https://vant-ui.github.io/vant",
-            },
-            {
-                icon: "https://webapp.didistatic.com/static/webapp/shield/Cube-UI_logo.ico",
-                title: "Cube UI",
-                desc: "基于 Vue.js 实现的精致移动端组件库",
-                link: "https://didi.github.io/cube-ui",
-            },
-            {
-                icon: "https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png",
-                title: "NutUI",
-                desc: "京东风格的轻量级移动端组件库",
-                link: "https://nutui.jd.com",
-            },
-        ],
-    },
-    {
-        title: "JavaScript 框架类库",
-        items: [
-            {
-                icon: "https://svelte.dev/svelte-logo-horizontal.svg",
-                title: "Svelte",
-                desc: "将声明性组件转换为精准高效更新 DOM 的 JavaScript 代码",
-                link: "https://svelte.dev",
-            },
-            {
-                // icon: 'https://simpleicons.org/icons/jquery.svg',
-                icon: "/icons/jquery.svg",
-                title: "jQuery API 中文文档",
-                desc: "一个兼容多浏览器的 JavaScript 框架",
-                link: "https://jquery.cuishifeng.cn",
-            },
-        ],
-    },
-    {
-        title: "CSS 相关",
-        items: [
-            {
-                icon: "https://postcss.org/assets/logo-3e39b0aa.svg",
-                title: "PostCSS",
-                desc: "一个用 JavaScript 转换 CSS 的工具",
-                link: "https://postcss.org",
-            },
-            {
-                icon: "https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg",
-                title: "Sass",
-                desc: "一个成熟，稳定，功能强大的专业级 CSS 扩展语言",
-                link: "https://sass-lang.com",
-            },
-            {
-                icon: "https://www.tailwindcss.cn/apple-touch-icon.png",
-                title: "TailwindCSS 中文网",
-                desc: "一个功能类优先的 CSS 框架",
-                link: "https://www.tailwindcss.cn",
-            },
-        ],
-    },
-    {
-        title: "小程序相关",
-        items: [
-            {
-                icon: "https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png",
-                title: "微信小程序文档",
-                desc: "微信小程序官方开发者文档",
-                link: "https://developers.weixin.qq.com/miniprogram/dev/framework/",
-            },
-            {
-                icon: "/icons/taro.svg",
-                title: "Taro",
-                desc: "多端统一开发解决方案",
-                link: "https://taro.jd.com",
-            },
-            {
-                icon: "https://web-assets.dcloud.net.cn/unidoc/zh/icon.png",
-                title: "uni-app",
-                desc: "一个使用 Vue.js 开发所有前端应用的框架",
-                link: "https://uniapp.dcloud.net.cn",
-            },
-            {
-                icon: "https://mpxjs.cn/favicon.ico",
-                title: "Mpx",
-                desc: "增强型跨端小程序框架",
-                link: "https://mpxjs.cn",
-            },
 
-        ],
-    },
-    {
-        title: "Node 相关",
-        items: [
-            {
-                icon: "/icons/nodejs.svg",
-                title: "Node.js",
-                desc: "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境",
-                link: "https://nodejs.org/zh-cn",
-            },
-            {
-                icon: "https://expressjs.com/images/favicon.png",
-                title: "Express",
-                desc: "基于 Node.js 平台，快速、开放、极简的 Web 开发框架",
-                link: "https://expressjs.com",
-            },
-            {
-                icon: "/icons/koa.svg",
-                title: "Koa",
-                desc: "基于 Node.js 平台的下一代 web 开发框架",
-                link: "https://koajs.com",
-            },
-            {
-                icon: "https://www.eggjs.org/favicon.png",
-                title: "Egg",
-                desc: "为企业级框架和应用而生",
-                link: "https://www.eggjs.org/zh-CN",
-            },
-            {
-                icon: "https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg",
-                title: "Nest.js 中文文档",
-                desc: "用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架",
-                link: "https://docs.nestjs.cn",
-            },
-        ],
-    },
     {
         title: "可视化",
         items: [
@@ -1089,53 +971,6 @@ export const NAV_DATA: NavData[] = [
                 title: "Three.js",
                 desc: "JavaScript 3d 库",
                 link: "https://threejs.org",
-            },
-        ],
-    },
-    {
-        title: "编译&构建&打包",
-        items: [
-            {
-                icon: "https://www.webpackjs.com/icon_180x180.png",
-                title: "Webpack 中文网",
-                desc: "一个用于现代 JavaScript 应用程序的静态模块打包工具",
-                link: "https://www.webpackjs.com",
-            },
-            {
-                icon: "https://cn.vitejs.dev/logo.svg",
-                title: "Vite 中文文档",
-                desc: "下一代前端工具链",
-                link: "https://cn.vitejs.dev",
-            },
-            {
-                icon: "https://www.rollupjs.com/img/favicon.png",
-                title: "Rollup",
-                desc: "Rollup 是一个 JavaScript 模块打包器",
-                link: "https://www.rollupjs.com",
-            },
-            {
-                icon: "https://turbo.build/images/favicon-dark/apple-touch-icon.png",
-                title: "Turbo",
-                desc: "Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust",
-                link: "https://turbo.build",
-            },
-            {
-                icon: "https://www.babeljs.cn/img/favicon.png",
-                title: "Babel",
-                desc: "Babel 是一个 JavaScript 编译器",
-                link: "https://www.babeljs.cn",
-            },
-            {
-                icon: "https://esbuild.github.io/favicon.svg",
-                title: "esbuild",
-                desc: "An extremely fast bundler for the web",
-                link: "https://esbuild.github.io",
-            },
-            {
-                icon: "https://swc.rs/favicon/apple-touch-icon.png",
-                title: "SWC",
-                desc: "Rust-based platform for the Web",
-                link: "https://swc.rs",
             },
         ],
     },
@@ -1198,7 +1033,7 @@ export const NAV_DATA: NavData[] = [
         ],
     },
     {
-        title: "前端学习资料",
+        title: "学习资料",
         items: [
             {
                 icon: "https://developer.mozilla.org/apple-touch-icon.6803c6f0.png",
