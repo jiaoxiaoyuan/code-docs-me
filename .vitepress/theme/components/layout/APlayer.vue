@@ -3,8 +3,38 @@ import { ref, onMounted } from "vue";
 import { defineClientComponent } from 'vitepress'
 
 // https://www.npmjs.com/package/@worstone/vue-aplayer
+const lrcShow = ref<boolean>(false);
+const autoplay = ref<boolean>(false);
 const aplayer = ref<any>(null);
 const audio = ref<any[]>([
+    {
+        "title": "七里香",
+        "author": "周杰伦",
+        "url": "https://img.mtsws.cn/LightPicture/2024/07/5d2b96c5cf9ba952.mp3",
+        "pic": "https://img.mtsws.cn/LightPicture/2024/07/a9b6f5f036bea7e4.jpg",
+        "lrc": ''
+    },
+    {
+        "title": "大城小爱",
+        "author": "王力宏",
+        "url": "https://img.mtsws.cn/LightPicture/2024/07/d1c9f3d097c5bd20.mp3",
+        "pic": "https://p1.music.126.net/hwEel4OwHFNcUwv7ffh4vA==/109951165958650585.jpg?param=300x300",
+        "lrc": ''
+    },
+    {
+        "title": "唯一",
+        "author": "王力宏",
+        "url": "https://img.mtsws.cn/LightPicture/2024/07/4966d796336885f3.mp3",
+        "pic": "https://p1.music.126.net/hwEel4OwHFNcUwv7ffh4vA==/109951165958650585.jpg?param=300x300",
+        "lrc": ''
+    },
+    {
+        "title": "需要人陪",
+        "author": "王力宏",
+        "url": "https://img.mtsws.cn/LightPicture/2024/07/3be635e366bf0daf.mp3",
+        "pic": "https://p1.music.126.net/hwEel4OwHFNcUwv7ffh4vA==/109951165958650585.jpg?param=300x300",
+        "lrc": ''
+    },
     {
         "title": "烟雨行舟（原唱：伦桑）",
         "author": "司南",
@@ -51,7 +81,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <APlayer :audio="audio" ref="aplayer" lrcShow  autoplay=fales mode="fixed"  />
+    <APlayer :audio="audio" ref="aplayer" :lrcShow="lrcShow"  :autoplay="autoplay" mode="fixed"   />
 </template>
 
 <style scoped lang='scss'></style>
