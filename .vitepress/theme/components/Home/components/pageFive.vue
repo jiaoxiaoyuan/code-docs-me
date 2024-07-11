@@ -1,9 +1,14 @@
 <template>
   <div class="container ">
-        <div class="content">
-            第二页
-        </div>
-        <!-- <FooterView></FooterView> -->
+    <iframe
+        src="http://json.jiaoxiaoyuan.cn/"
+        width="100%"
+        height="100%"
+        title="工具箱"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    ></iframe>
   </div>
 </template>
 
@@ -19,8 +24,6 @@
     // background-color: #FF5722;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     animation: fadeInOut 1s forwards;
 
     @keyframes fadeInOut {
