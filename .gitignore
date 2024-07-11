@@ -1,12 +1,11 @@
 node_modules/
 .vitepress/cache/
 .vitepress/cache/dist/
-dist/
+*/dist/*
 .DS_Store
 .idea/
 .vscode/
-
 yarn.lock
 .vitepress/.temp/
+.vitepress/dist/**
 .vitepress/dist/
-

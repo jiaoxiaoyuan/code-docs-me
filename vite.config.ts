@@ -19,7 +19,7 @@ const viteConfig = defineConfig(({ mode, command }) => {
             extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
         },
         // plugins: [vue()],
-        plugins: [...createVitePlugins(env), vue()],
+        // plugins: [...createVitePlugins(env), vue()],
         // 设置打包路径
     };
 });

@@ -19,26 +19,26 @@ const viteConfig = defineConfig(({ mode, command }) => {
             extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
         },
         // plugins: [vue()],
-        plugins: [...createVitePlugins(env), vue()],
+        // plugins: [...createVitePlugins(env), vue()],
         // 设置打包路径
-        build: {
-            rollupOptions: {
-                external: ["vue"],
-                output: {
-                    globals: {
-                        vue: "Vue",
-                    },
-                    intro: 'import "./style.css";',
-                },
-            },
-            minify: "terser",
-            terserOptions: {
-                compress: {
-                    // 生产环境时移除 console
-                    pure_funcs: ["console.log"],
-                },
-            },
-        },
+        // build: {
+        //     rollupOptions: {
+        //         external: ["vue"],
+        //         output: {
+        //             globals: {
+        //                 vue: "Vue",
+        //             },
+        //             intro: 'import "./style.css";',
+        //         },
+        //     },
+        //     minify: "terser",
+        //     terserOptions: {
+        //         compress: {
+        //             // 生产环境时移除 console
+        //             pure_funcs: ["console.log"],
+        //         },
+        //     },
+        // },
     };
 });
 
