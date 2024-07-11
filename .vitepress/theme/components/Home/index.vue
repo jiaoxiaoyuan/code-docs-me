@@ -1,20 +1,21 @@
 <template>
-  <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
-    <div class="app-segmented">
-      <ul>
-            <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
-            <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
-            <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
-            <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
-            <div @click="increment(4)" class="icon fa fa-wrench" :class="[typeNum === 5 ? 'activeClass' : '']"></div>
-      </ul>
+    <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
+        <div class="app-segmented">
+            <ul>
+                <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+                <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
+                <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
+                <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
+                <div @click="increment(5)" class="icon fa fa-wrench" :class="[typeNum === 5 ? 'activeClass' : '']"></div>
+            </ul>
+        </div>
+        <!-- <component :is="currentComponent"></component> -->
+        <ComponentA v-show="typeNum === 1" :Holiday="Holiday" :yearTips="yearTips" :Weather="Weather" :hitokotoData="hitokotoData"></ComponentA>
+        <ComponentB v-show="typeNum === 2"></ComponentB>
+        <ComponentC v-show="typeNum === 3"></ComponentC>
+        <ComponentD v-show="typeNum === 4"></ComponentD>
+        <ComponentE v-show="typeNum === 5"></ComponentE>
     </div>
-    <!-- <component :is="currentComponent"></component> -->
-    <ComponentA v-show="typeNum === 1" :Holiday="Holiday" :yearTips="yearTips" :Weather="Weather" :hitokotoData="hitokotoData"></ComponentA>
-    <ComponentB v-show="typeNum === 2"></ComponentB>
-    <ComponentC v-show="typeNum === 3"></ComponentC>
-    <ComponentD v-show="typeNum === 4"></ComponentD>
-  </div>
 </template>
 <script setup lang="ts">
 import { ElMessage } from "element-plus";
@@ -24,6 +25,7 @@ import ComponentA from "./components/pageOne.vue";
 import ComponentB from "./components/pageTwo.vue";
 import ComponentC from "./components/pagThree.vue";
 import ComponentD from "./components/pagFour.vue";
+import ComponentE from "./components/pageFive.vue";
 
 const currentComponent = shallowRef<ComponentType>(ComponentA);
 const typeNum = ref<number>(1);
@@ -34,22 +36,25 @@ type ComponentType =
     | typeof ComponentA
     | typeof ComponentB
     | typeof ComponentC
-    | typeof ComponentD;
+    | typeof ComponentD
+    | typeof ComponentE;
 // 定义组件映射表
-const componentMap: Record<1 | 2 | 3 | 4, ComponentType> = {
+const componentMap: Record<1 | 2 | 3 | 4 | 5, ComponentType> = {
     1: ComponentA,
     2: ComponentB,
     3: ComponentC,
     4: ComponentD,
+    5: ComponentE
 };
 const currentBgurl = {
     1: "https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg",
     2: "https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg",
     3: "https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg",
     4: "https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg",
+    5: "https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg",
 };
 
-const increment = (e: 1 | 2 | 3 | 4) => {
+const increment = (e: 1 | 2 | 3 | 4 | 5) => {
     typeNum.value = e;
     currentComponent.value = componentMap[e];
     Bgurl.value = currentBgurl[e];

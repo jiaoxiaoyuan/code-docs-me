@@ -6,9 +6,9 @@ import { metaData } from "./constants";
 
 export const themeConfig: DefaultTheme.Config = {
     // 导航栏配置
-    // nav,
+    nav,
     // 侧边栏配置
-    // sidebar,
+    sidebar,
     // 搜索框
     logo: metaData.image,
     // 搜索

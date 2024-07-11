@@ -1,6 +1,6 @@
 
 <script setup lang="ts">
-import { ref, } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const date = ref<string>('')
 const time = ref<string>('')
@@ -8,7 +8,13 @@ const week = ['周日', '周一', '周二', '周三', '周四', '周五', '周�
 
 
 
-setInterval(updateTime, 1000);
+onMounted(() => {
+    setInterval(updateTime, 1000);
+})
+
+
+
+
 function updateTime () {
     let cd = new Date();
     time.value = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
