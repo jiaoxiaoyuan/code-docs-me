@@ -6,6 +6,7 @@
             <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
             <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
             <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
+            <div @click="increment(4)" class="icon fa fa-wrench" :class="[typeNum === 5 ? 'activeClass' : '']"></div>
       </ul>
     </div>
     <!-- <component :is="currentComponent"></component> -->

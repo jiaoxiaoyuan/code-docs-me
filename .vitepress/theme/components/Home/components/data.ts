@@ -1146,4 +1146,24 @@ export const NAV_DATA: NavData[] = [
             },
         ],
     },
+    {
+        title: "其他",
+        items: [
+            {
+                icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
+                title: "山月行",
+                link: "https://shanyue.tech/",
+            },
+            {
+                icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
+                title: "冴羽的博客",
+                link: "https://github.com/mqyqingfeng/Blog",
+            },
+            {
+                icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
+                title: "JavaScript开发者应懂的33个概念",
+                link: "https://github.com/stephentian/33-js-concepts",
+            },
+        ]
+    }
 ];
