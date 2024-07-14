@@ -61,10 +61,11 @@ onServerPrefetch(async () => {
 })
 
 onMounted(async () => {
-    if (!NAV_DATA.value) {
-        await getData();
-    }
+    // if (!NAV_DATA.value) {
+    //     await getData();
+    // }
 
+    await getData();
 });
 
 </script>

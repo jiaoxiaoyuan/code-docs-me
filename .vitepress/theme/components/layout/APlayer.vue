@@ -22,15 +22,12 @@ const getData = async () => {
 
 
 
-onServerPrefetch(async () => {
-    await getData();
-})
+// onServerPrefetch(async () => {
+//     await getData();
+// })
 
 onMounted(async () => {
-    if (!audio.value) {
-        await getData();
-    }
-
+    await getData();
 });
 
 </script>

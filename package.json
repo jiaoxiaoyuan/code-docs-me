@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "scripts": {
         "dev": "vitepress dev",
-        "build": "vitepress build",
+        "build": "vitepress build --max-old-space-size=4096 --mode test",
         "preview": "vitepress preview"
     },
     "devDependencies": {
