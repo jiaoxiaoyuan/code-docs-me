@@ -53,6 +53,7 @@ type activities = {
     photo: string //拍照
     position: string //位置
     quotations: string // 说说
+    consumption: string // 消费
 }
 
 
@@ -205,6 +206,17 @@ onMounted(async () => {
                     <el-row style="width: 100%; text-align: left;">
                         <!-- <el-alert :title="activity?.quotations" type="success" closable="false" /> -->
                          <el-text class="mx-1">{{ activity?.quotations }}</el-text>
+                    </el-row >
+                </div>
+
+                <!-- 今日消费 -->
+                <div class="card_item" v-if="activity?.consumption.length > 0">
+                    <div class="card_title">
+                    <i class="fa fa-font-awesome"></i>
+                        今日消费
+                    </div>
+                    <el-row style="width: 100%; text-align: left;">
+                         <el-text class="mx-1">{{ activity?.consumption }}</el-text>
                     </el-row >
                 </div>
 
