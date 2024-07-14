@@ -33,7 +33,7 @@ function classifyWebsites (websites: WebsiteItem[]): ClassifiedWebsite[] {
     for (const website of websites) {
         const { websitetype_id, websitetype } = website;
         if (!websiteTypes[websitetype_id]) {
-            websiteTypes[websitetype_id] = websitetype.type_name;
+            websiteTypes[websitetype_id] = websitetype?.type_name;
         }
     }
 
@@ -53,18 +53,18 @@ const getData = async () => {
     let res = await getNav();
     if (res.status === 200) {
         NAV_DATA.value = classifyWebsites(res.data.data);
-
     }
 };
 
-
-
-onServerPrefetch(() => {
-    getData();
+onServerPrefetch(async () => {
+    await getData();
 })
 
-onMounted(() => {
-    getData();
+onMounted(async () => {
+    if (!NAV_DATA.value) {
+        await getData();
+    }
+
 });
 
 </script>
