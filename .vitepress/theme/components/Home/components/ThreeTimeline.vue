@@ -127,7 +127,7 @@ onMounted(async () => {
                 <div class="card_item" v-if="activity?.activity.length > 0">
                     <div class="card_title">
                     <i class="fa fa-font-awesome"></i>
-                        活动
+                        重要事件
                     </div>
                     <el-row style="width: 100%; text-align: left;">
                      <template  v-for="(item, is) in activity?.activity.split(',')" :key="is">
