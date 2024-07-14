@@ -1,6 +1,72 @@
 <script setup lang="ts">
-import { NAV_DATA } from "./data";
+import { ref, onMounted, onServerPrefetch } from "vue";
+// import { NAV_DATA } from "./data";
 import MNavLinks from "../../MNavLinks.vue";
+import { getNav } from "../../../../api";
+
+const NAV_DATA = ref<any[]>();
+
+interface WebsiteItem {
+    id: number;
+    websitetype_id: number;
+    label: string;
+    icon: string;
+    title: string;
+    descs: string;
+    link: string;
+    sort: number;
+    websitetype: {
+        type_name: string;
+    };
+}
+
+interface ClassifiedWebsite {
+    title: string;
+    items: WebsiteItem[];
+}
+
+function classifyWebsites (websites: WebsiteItem[]): ClassifiedWebsite[] {
+    const result: ClassifiedWebsite[] = [];
+    const websiteTypes: { [key: number]: string } = {};
+
+    // 收集所有的网站类型
+    for (const website of websites) {
+        const { websitetype_id, websitetype } = website;
+        if (!websiteTypes[websitetype_id]) {
+            websiteTypes[websitetype_id] = websitetype.type_name;
+        }
+    }
+
+    // 按类型分类网站
+    for (const typeId in websiteTypes) {
+        const typeName = websiteTypes[+typeId];
+        const items = websites.filter(website => website.websitetype_id === +typeId);
+        result.push({ title: typeName, items });
+    }
+
+    return result;
+}
+
+
+
+const getData = async () => {
+    let res = await getNav();
+    if (res.status === 200) {
+        NAV_DATA.value = classifyWebsites(res.data.data);
+
+    }
+};
+
+
+
+onServerPrefetch(() => {
+    getData();
+})
+
+onMounted(() => {
+    getData();
+});
+
 </script>
 <template>
   <div class="content">

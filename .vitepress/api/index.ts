@@ -13,6 +13,14 @@ export const getHitokoto = async () => {
 }
 
 /**
+ *  背景音乐
+ */
+export const getMusic = async () => {
+    const res = await fetch('https://tp.mtsws.cn/api/Music/index')
+    return await res.json()
+}
+
+/**
  * 节假日/万年历
  */
 
@@ -33,5 +41,13 @@ export const getIp = async () => {
  */
 export const getWeather = async (city: string) => {
     const res = await fetch(`${publicUrl}/weather/current/${city}?app_id=${appId}&app_secret=${appSecret}`)
+    return await res.json()
+}
+
+/**
+ * 获取网址导航
+ */
+export const getNav = async () => {
+    const res = await fetch(`https://tp.mtsws.cn/api/Websitelist/index`)
     return await res.json()
 }

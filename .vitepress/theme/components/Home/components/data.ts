@@ -41,7 +41,7 @@ export const NAV_DATA: NavData[] = [
             {
                 icon: "https://t1.chei.com.cn/chsi/favicon.ico",
                 title: "学信网",
-                desc: "中国高等教育学生信息网（学信网",
+                desc: "中国高等教育学生信息网（学信网）",
                 link: "https://www.chsi.com.cn",
             },
             {
@@ -54,13 +54,13 @@ export const NAV_DATA: NavData[] = [
                 icon: "http://www.cpta.com.cn/favicon.ico",
                 title: "中国人事考试网",
                 desc: "人事考试，考试报名，资格考试，公务员考试",
-                link: "https://www.cpta.com.cn",
+                link: "http://www.cpta.com.cn",
             },
             {
                 icon: "https://www.ruankao.org.cn/asset/image/logo/logo.png",
                 title: "软考网",
                 desc: "中国计算机技术职业资格网",
-                link: "hhttps://www.ruankao.org.cn",
+                link: "https://www.ruankao.org.cn",
             },
             {
                 icon: "https://www.ruankao.org.cn/asset/image/logo/logo.png",
@@ -160,8 +160,8 @@ export const NAV_DATA: NavData[] = [
             },
             {
                 icon: "https://www.12348.gov.cn/resources/images/favicon.png",
-                title: "标准地图服务系统",
-                desc: "标准地图依据中国和世界各国国界线画法标准编制而成，可用于新闻宣传用图、书刊报纸插图、广告展示背景图、工艺品设计底图等",
+                title: "中国法律服务网",
+                desc: "中国法律服务网",
                 link: "https://www.12348.gov.cn",
             },
             {
