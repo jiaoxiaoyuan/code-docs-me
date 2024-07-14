@@ -49,7 +49,9 @@ const componentMap: Record<1 | 2 | 3 | 4 | 5, ComponentType> = {
 const currentBgurl = {
     1: "https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg",
     2: "https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg",
-    3: "https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg",
+    3: "https://img.mtsws.cn/LightPicture/2024/07/5637808f678351aa.jpg",
+    // 3: "https://img.mtsws.cn/LightPicture/2024/07/2568f6994ffa7eb1.jpg",
+    // 3: "https://img.mtsws.cn/LightPicture/2024/07/257df8fba6fd3cc3.jpg",
     4: "https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg",
     5: "https://img.mtsws.cn/LightPicture/2024/07/21ba78820a737c68.jpg",
 };

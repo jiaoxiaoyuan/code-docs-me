@@ -51,3 +51,11 @@ export const getNav = async () => {
     const res = await fetch(`https://tp.mtsws.cn/api/Websitelist/index`)
     return await res.json()
 }
+
+/**
+ * 日迹
+ */
+export const getTimeline = async () => {
+    const res = await fetch(`https://tp.mtsws.cn/api/Timeline/index`)
+    return await res.json()
+}
