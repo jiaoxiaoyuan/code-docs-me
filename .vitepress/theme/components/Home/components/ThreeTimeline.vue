@@ -1,7 +1,8 @@
 <script setup lang='ts'>
 import { ref, onServerPrefetch, onMounted } from 'vue'
 import { getTimeline } from '../../../../api';
-import { timeCutStr, formatDate, timeSub } from 'func-package';
+import { timeCutStr, formatDate } from '../../../../utils';
+
 
 function convertTimestampToHMS (timestamp: number): string {
     const date = new Date(timestamp * 1000);

@@ -40,7 +40,6 @@
         "@worstone/vue-aplayer": "^1.0.6",
         "blueimp-md5": "^2.19.0",
         "element-plus": "^2.7.6",
-        "func-package": "^0.0.4-beta.4",
         "vue-tsx-support": "^3.2.0"
     }
 }
