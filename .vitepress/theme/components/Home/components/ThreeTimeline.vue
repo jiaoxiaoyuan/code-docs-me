@@ -210,7 +210,7 @@ onMounted(async () => {
                 </div>
 
                 <!-- 今日消费 -->
-                <div class="card_item" v-if="activity?.consumption.length > 0">
+                <div class="card_item" v-if="activity?.consumption">
                     <div class="card_title">
                     <i class="fa fa-font-awesome"></i>
                         今日消费
