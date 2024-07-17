@@ -8,12 +8,15 @@ import Footer from './components/layout/Footer.vue';
 import APlayer from './components/layout/APlayer.vue';
 
 
+// import HomeIndex from "./components/Home/index.vue";
+import HomeLayout from './components/Home/layout.vue';
+
 const { Layout } = DefaultTheme;
 const { page, theme, frontmatter } = useData();
 
 // console.log('page',page)
 // console.log('theme',theme)
-// console.log('frontmatter',frontmatter)
+// console.log('frontmatter', frontmatter.value)
 
 
 const hasSidebar = computed(() => {
@@ -31,6 +34,8 @@ const hasSidebar = computed(() => {
             <Footer />
         </template>
     </Layout>
+
+    <HomeLayout v-if="frontmatter.index"></HomeLayout>
 
     <APlayer></APlayer>
 

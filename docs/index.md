@@ -1,4 +1,5 @@
 ---
+index: true
 layout: false
 nav: false
 sidebar: false
@@ -40,6 +41,6 @@ titleTemplate: 欢迎来到我的博客
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-<HomeIndex/>
+<!-- <HomeIndex/> -->
 
 

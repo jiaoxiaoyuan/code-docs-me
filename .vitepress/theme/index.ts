@@ -14,6 +14,10 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 
+//音乐播放插件
+import vitepressMusic from 'vitepress-plugin-music'
+import 'vitepress-plugin-music/lib/css/index.css'
+import { musicPlaylist } from './src/utils/tool';
 
 // 只需添加以下一行代码，引入时间线样式
 import "vitepress-markdown-timeline/dist/theme/index.css";
@@ -29,7 +33,8 @@ export default {
         app.use(ElementPlus);
         useComponents({ app, router, siteData });
 
-
+        //音乐插件
+        vitepressMusic(musicPlaylist)
     },
 
     setup() {

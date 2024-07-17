@@ -2,12 +2,18 @@
     <div class="app-container" :style="{ backgroundImage: `url(${Bgurl})` }">
         <div class="app-segmented">
             <ul>
+                <a href="/">
+                    <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+                </a>
 
-                <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
-                <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
+                <a href="/pageOne">
+                    <div @click="increment(1)" class="icon fa fa-home" :class="[typeNum === 1 ? 'activeClass' : '']"></div>
+                </a>
+
+                <!-- <div @click="increment(2)" class="icon fa fa-keyboard-o" :class="[typeNum === 2 ? 'activeClass' : '']"></div>
                 <div @click="increment(3)" class="icon fa fa-coffee" :class="[typeNum === 3 ? 'activeClass' : '']"></div>
                 <div @click="increment(4)" class="icon fa fa-dribbble" :class="[typeNum === 4 ? 'activeClass' : '']"></div>
-                <div @click="increment(5)" class="icon fa fa-wrench" :class="[typeNum === 5 ? 'activeClass' : '']"></div>
+                <div @click="increment(5)" class="icon fa fa-wrench" :class="[typeNum === 5 ? 'activeClass' : '']"></div> -->
             </ul>
         </div>
         <!-- <component :is="currentComponent"></component> -->
@@ -19,6 +25,7 @@
     </div>
 </template>
 <script setup lang="ts">
+import { useData } from 'vitepress';
 import { ElMessage } from "element-plus";
 import { ref, shallowRef, onMounted, reactive, onServerPrefetch } from "vue";
 import { getHoliday, getIp, getWeather, getHitokoto } from "../../../api";
@@ -142,6 +149,10 @@ onMounted(async () => {
     }, 2000);
 });
 
+const { page, theme, frontmatter } = useData();
+console.log(page);
+console.log(theme);
+console.log('frontmatter', frontmatter);
 
 </script>
 <style scoped lang="scss">

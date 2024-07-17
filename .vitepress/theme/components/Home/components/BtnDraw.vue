@@ -11,7 +11,7 @@ const data = defineProps<{
 <template>
     <div size="20" class="homebuttons">
         <el-space wrap>
-            <a class="btn-draw" href="/KnowledgeBase"><span>知识库</span></a>
+            <a class="btn-draw" href="/KnowledgeBase?id=1"><span>知识库</span></a>
         </el-space>
         <el-space wrap>
             <a class="btn-draw" href="/Navigation"><span>导航</span></a>
