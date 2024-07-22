@@ -2,6 +2,8 @@
 import { ref, onServerPrefetch, onMounted } from 'vue'
 import { getTimeline } from '../../../../api';
 import { timeCutStr, formatDate } from '../../../../utils';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 
 
 function convertTimestampToHMS (timestamp: number): string {
