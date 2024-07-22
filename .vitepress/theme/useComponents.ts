@@ -7,6 +7,7 @@ import BasePage from "./components/Base/index.vue";
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
+
 export function useComponents({app}: EnhanceAppContext) {
     app.component("MNavLinks", MNavLinks);
     app.component("HomeIndex", HomeIndex);
