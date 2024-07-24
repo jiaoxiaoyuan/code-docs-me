@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import timeline from "vitepress-markdown-timeline";
-
+import { resolve } from "path";
 import { head } from "./config/head";
 import { metaData } from "./config/constants";
 import { themeConfig } from "./config/theme";
@@ -33,4 +33,17 @@ export default defineConfig({
         hostname: "https://www.4rvi.cn",
         lastmodDateOnly: false,
     },
+    vite: {
+        // 配置别名
+
+        resolve: {
+            // alias,
+            alias: {
+                /** @ 符号指向 src 目录 */
+                "@": resolve(__dirname, "./.vitepress"),
+                "@/page": resolve(__dirname, "./page"),
+            },
+            extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
+        },
+    }
 });

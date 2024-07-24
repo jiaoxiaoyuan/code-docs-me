@@ -11,7 +11,9 @@ import APlayer from './components/layout/APlayer.vue';
 const { Layout } = DefaultTheme;
 const { page, theme, frontmatter } = useData();
 
-// console.log('page',page)
+console.log('page', page.value.title)
+// console.log('theme', theme.value)
+// console.log('frontmatter', frontmatter.value)
 // console.log('theme',theme)
 // console.log('frontmatter',frontmatter)
 
@@ -30,7 +32,14 @@ const hasSidebar = computed(() => {
         <template #layout-bottom>
             <Footer />
         </template>
+        <template #not-found>
+            <div v-if="page.title === '404'">
+                Custom 404 page!
+            </div>
+        </template>
     </Layout>
+
+
 
     <APlayer></APlayer>
 
